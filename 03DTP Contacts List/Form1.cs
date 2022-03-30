@@ -30,6 +30,7 @@ namespace _03DTP_Contacts_List
             form.Text = ("Contact " + num);
             form.Show();
             global.contactCount++;
+            // need to store data
         }
     }
 }
