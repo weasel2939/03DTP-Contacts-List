@@ -19,6 +19,9 @@ namespace _03DTP_Contacts_List
             editNumber.Enabled = false;
         }
 
+        // use a writefile instead
+        public string[] contactName { get; set; }
+
         private void btnName_Click(object sender, EventArgs e)
         {
             editName.Enabled = true;
@@ -26,13 +29,15 @@ namespace _03DTP_Contacts_List
             editName.Text = "";
 
         }
-
-
         private void okName_Click(object sender, EventArgs e)
         {
             editName.Enabled = false;
             string name = editName.Text;
             displayName.Text = name;
+            // need to add to the form1 list
+            // use writefile instead, push to the list in Form1
+            contactName[Form1.global.contactCount] = name;
+            MessageBox.Show(contactName[Form1.global.contactCount]);
         }
 
 
