@@ -33,15 +33,15 @@ namespace _03DTP_Contacts_List
             this.listView1 = new System.Windows.Forms.ListView();
             this.contName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.contNum = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.contAfil = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.contAge = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // contactNew
             // 
-            this.contactNew.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.contactNew.Location = new System.Drawing.Point(12, 25);
+            this.contactNew.Font = new System.Drawing.Font("Myanmar Text", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.contactNew.Location = new System.Drawing.Point(74, 25);
             this.contactNew.Name = "contactNew";
-            this.contactNew.Size = new System.Drawing.Size(154, 61);
+            this.contactNew.Size = new System.Drawing.Size(160, 29);
             this.contactNew.TabIndex = 1;
             this.contactNew.Text = "New Contact";
             this.contactNew.UseVisualStyleBackColor = true;
@@ -52,12 +52,13 @@ namespace _03DTP_Contacts_List
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.contName,
             this.contNum,
-            this.contAfil});
+            this.contAge});
+            this.listView1.Font = new System.Drawing.Font("Myanmar Text", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listView1.GridLines = true;
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(519, 25);
+            this.listView1.Location = new System.Drawing.Point(240, 25);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(269, 387);
+            this.listView1.Size = new System.Drawing.Size(251, 287);
             this.listView1.TabIndex = 3;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -65,19 +66,19 @@ namespace _03DTP_Contacts_List
             // contName
             // 
             this.contName.Text = "Name";
-            this.contName.Width = 84;
+            this.contName.Width = 73;
             // 
             // contNum
             // 
             this.contNum.Text = "Phone Number";
             this.contNum.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.contNum.Width = 103;
+            this.contNum.Width = 116;
             // 
-            // contAfil
+            // contAge
             // 
-            this.contAfil.Text = "Affiliation";
-            this.contAfil.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.contAfil.Width = 80;
+            this.contAge.Text = "Age";
+            this.contAge.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.contAge.Width = 58;
             // 
             // Form1
             // 
@@ -98,7 +99,7 @@ namespace _03DTP_Contacts_List
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.ColumnHeader contName;
         private System.Windows.Forms.ColumnHeader contNum;
-        private System.Windows.Forms.ColumnHeader contAfil;
+        private System.Windows.Forms.ColumnHeader contAge;
     }
 }
 

@@ -20,7 +20,6 @@ namespace _03DTP_Contacts_List
         }
 
         // use a writefile instead
-        public string[] contactName { get; set; }
 
         private void btnName_Click(object sender, EventArgs e)
         {
@@ -36,8 +35,6 @@ namespace _03DTP_Contacts_List
             displayName.Text = name;
             // need to add to the form1 list
             // use writefile instead, push to the list in Form1
-            contactName[Form1.global.contactCount] = name;
-            MessageBox.Show(contactName[Form1.global.contactCount]);
         }
 
 
@@ -67,6 +64,37 @@ namespace _03DTP_Contacts_List
                 number = int.Parse(editNumber.Text);
 
             }
+
+        }
+
+        private void btnAge_Click(object sender, EventArgs e)
+        {
+            editAge.Enabled = true;
+            this.ActiveControl = editAge;
+            editAge.Text = "";
+        }
+
+        private void okAge_Click(object sender, EventArgs e)
+        {
+            int age = 0;
+            bool isNumber = false;
+            isNumber = int.TryParse(editAge.Text, out age);
+
+            if (!isNumber)
+            {
+                editAge.Text = "";
+                this.ActiveControl = editAge;
+            }
+            else
+            {
+                editAge.Enabled = false;
+                displayAge.Text = ("Age: [ " + age + " ]");
+                age = int.Parse(editAge.Text);
+            }
+        }
+
+        private void okAdd_Click(object sender, EventArgs e)
+        {
 
         }
     }

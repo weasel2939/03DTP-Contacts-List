@@ -7,16 +7,39 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace _03DTP_Contacts_List
 {
     public partial class Form1 : Form
     {
+        public static bool editConfirm = false;
+        public static string contactName = string.Empty;
+        public static string contactNum = string.Empty;
+        public static string contactAge = string.Empty;
+
+        string filePath = @"H:/contactStorage.txt";
+
+        public void LoadContacts()
+        {
+            listView1.Items.Clear();
+            List<string> lines = File.ReadAllLines(filePath).ToList();
+            foreach (string line in lines)
+            {
+                string[] sections = line.Split(',');
+
+                ListViewItem lvi = new ListViewItem(sections[0]);
+                lvi.SubItems.Add(sections[1]);
+                lvi.SubItems.Add(sections[2]);
+                listView1.Items.Add(lvi);
+            }
+        }
+
         public Form1()
         {
             InitializeComponent();
-            string[] contactName = new string[global.contactCount];
         }
+
         public class global
         {
             public static int contactCount = 0;
@@ -27,14 +50,21 @@ namespace _03DTP_Contacts_List
         {
             // Creates the form
             global.num++;
-            Form form = new Contact_Page1();
-            form.Text = ("Contact " + global.num);
-            form.Show();
+
+            Form newContact = new Contact_Page1();
+            newContact.Text = ("Contact " + global.num);
+
+            newContact.ShowDialog();
+
             if (global.num > 1)
             {
                 global.contactCount++;
             }
-            // need to store data
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            LoadContacts();
         }
     }
 }
