@@ -14,12 +14,19 @@ namespace _03DTP_Contacts_List
     public partial class Form1 : Form
     {
         public static bool editConfirm = false;
+        public static bool createConfirm = false;
         public static string contactName = string.Empty;
-        public static string contactNum = string.Empty;
-        public static string contactAge = string.Empty;
+        public static int contactNum = 0;
+        public static int contactAge = 0;
 
-        string filePath = @"H:/contactStorage.txt";
+        string filePath = @"contactStorage.txt";
 
+        public void createContact()
+        {
+            string[] allLines = File.ReadAllLines(filePath);
+            allLines[global.contactCount] = $"{contactName},{contactAge},{contactNum}";
+            File.WriteAllLines(filePath, allLines);
+        }
         public void LoadContacts()
         {
             listView1.Items.Clear();
@@ -56,6 +63,8 @@ namespace _03DTP_Contacts_List
 
             newContact.ShowDialog();
 
+            createContact();
+
             if (global.num > 1)
             {
                 global.contactCount++;
@@ -63,6 +72,11 @@ namespace _03DTP_Contacts_List
         }
 
         private void Form1_Load(object sender, EventArgs e)
+        {
+            LoadContacts();
+        }
+
+        private void contactsLoad_Click(object sender, EventArgs e)
         {
             LoadContacts();
         }

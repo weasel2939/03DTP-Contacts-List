@@ -12,6 +12,10 @@ namespace _03DTP_Contacts_List
 {
     public partial class Contact_Page1 : Form
     {
+        public static string name = "";
+        public static int number = 0;
+        public static int age = 0;
+
         public Contact_Page1()
         {
             InitializeComponent();
@@ -48,7 +52,7 @@ namespace _03DTP_Contacts_List
 
         private void okNumber_Click(object sender, EventArgs e)
         {
-            int number = 0;
+            number = 0;
             bool isNumber = false;
             isNumber = int.TryParse(editNumber.Text, out number);
 
@@ -76,7 +80,7 @@ namespace _03DTP_Contacts_List
 
         private void okAge_Click(object sender, EventArgs e)
         {
-            int age = 0;
+            age = 0;
             bool isNumber = false;
             isNumber = int.TryParse(editAge.Text, out age);
 
@@ -95,7 +99,11 @@ namespace _03DTP_Contacts_List
 
         private void okAdd_Click(object sender, EventArgs e)
         {
-
+            Form1.contactName = name;
+            Form1.contactNum = number;
+            Form1.contactAge = age;
+            Form1.createConfirm = true;
+            this.Close();
         }
     }
 }

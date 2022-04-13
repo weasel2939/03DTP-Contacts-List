@@ -34,6 +34,7 @@ namespace _03DTP_Contacts_List
             this.contName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.contNum = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.contAge = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.contactsLoad = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // contactNew
@@ -80,15 +81,27 @@ namespace _03DTP_Contacts_List
             this.contAge.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.contAge.Width = 58;
             // 
+            // contactsLoad
+            // 
+            this.contactsLoad.Font = new System.Drawing.Font("Myanmar Text", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.contactsLoad.Location = new System.Drawing.Point(12, 415);
+            this.contactsLoad.Name = "contactsLoad";
+            this.contactsLoad.Size = new System.Drawing.Size(113, 23);
+            this.contactsLoad.TabIndex = 4;
+            this.contactsLoad.Text = "Load Contacts File";
+            this.contactsLoad.UseVisualStyleBackColor = true;
+            this.contactsLoad.Click += new System.EventHandler(this.contactsLoad_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.contactsLoad);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.contactNew);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "D";
             this.ResumeLayout(false);
 
         }
@@ -100,6 +113,7 @@ namespace _03DTP_Contacts_List
         private System.Windows.Forms.ColumnHeader contName;
         private System.Windows.Forms.ColumnHeader contNum;
         private System.Windows.Forms.ColumnHeader contAge;
+        private System.Windows.Forms.Button contactsLoad;
     }
 }
 
