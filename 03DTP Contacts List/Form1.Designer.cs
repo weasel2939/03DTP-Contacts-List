@@ -40,9 +40,10 @@ namespace _03DTP_Contacts_List
             // contactNew
             // 
             this.contactNew.Font = new System.Drawing.Font("Myanmar Text", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.contactNew.Location = new System.Drawing.Point(74, 25);
+            this.contactNew.Location = new System.Drawing.Point(99, 31);
+            this.contactNew.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.contactNew.Name = "contactNew";
-            this.contactNew.Size = new System.Drawing.Size(160, 29);
+            this.contactNew.Size = new System.Drawing.Size(213, 36);
             this.contactNew.TabIndex = 1;
             this.contactNew.Text = "New Contact";
             this.contactNew.UseVisualStyleBackColor = true;
@@ -57,9 +58,10 @@ namespace _03DTP_Contacts_List
             this.listView1.Font = new System.Drawing.Font("Myanmar Text", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listView1.GridLines = true;
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(240, 25);
+            this.listView1.Location = new System.Drawing.Point(333, 31);
+            this.listView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(251, 287);
+            this.listView1.Size = new System.Drawing.Size(362, 352);
             this.listView1.TabIndex = 3;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -67,7 +69,7 @@ namespace _03DTP_Contacts_List
             // contName
             // 
             this.contName.Text = "Name";
-            this.contName.Width = 73;
+            this.contName.Width = 98;
             // 
             // contNum
             // 
@@ -84,9 +86,10 @@ namespace _03DTP_Contacts_List
             // contactsLoad
             // 
             this.contactsLoad.Font = new System.Drawing.Font("Myanmar Text", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.contactsLoad.Location = new System.Drawing.Point(12, 415);
+            this.contactsLoad.Location = new System.Drawing.Point(16, 511);
+            this.contactsLoad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.contactsLoad.Name = "contactsLoad";
-            this.contactsLoad.Size = new System.Drawing.Size(113, 23);
+            this.contactsLoad.Size = new System.Drawing.Size(151, 28);
             this.contactsLoad.TabIndex = 4;
             this.contactsLoad.Text = "Load Contacts File";
             this.contactsLoad.UseVisualStyleBackColor = true;
@@ -94,12 +97,13 @@ namespace _03DTP_Contacts_List
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.contactsLoad);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.contactNew);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form1";
             this.Text = "D";
             this.ResumeLayout(false);

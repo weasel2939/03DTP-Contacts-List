@@ -21,14 +21,24 @@ namespace _03DTP_Contacts_List
 
         string filePath = @"contactStorage.txt";
 
+        // writes to filepath
         public void createContact()
         {
-            string[] allLines = File.ReadAllLines(filePath);
-            allLines[global.contactCount] = $"{contactName},{contactAge},{contactNum}";
-            File.WriteAllLines(filePath, allLines);
+            ListViewItem lvi = new ListViewItem(contactName);
+            lvi.SubItems.Add(contactAge.ToString());
+            lvi.SubItems.Add(contactNum.ToString());
+            listView1.Items.Add(lvi);
+
+            File.AppendAllText(filePath, $"\n{contactName},{contactAge.ToString()},{contactNum.ToString()}");
+
+            LoadContacts();
         }
+
+        // reads from filepath
         public void LoadContacts()
         {
+
+            // NOT WORKING
             listView1.Items.Clear();
             List<string> lines = File.ReadAllLines(filePath).ToList();
             foreach (string line in lines)
@@ -63,7 +73,10 @@ namespace _03DTP_Contacts_List
 
             newContact.ShowDialog();
 
-            createContact();
+            if (createConfirm)
+            {
+                createContact();
+            }
 
             if (global.num > 1)
             {
