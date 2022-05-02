@@ -35,15 +35,16 @@ namespace _03DTP_Contacts_List
             this.contNum = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.contAge = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.contactsLoad = new System.Windows.Forms.Button();
+            this.contactEdit = new System.Windows.Forms.Button();
+            this.contactDelete = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // contactNew
             // 
             this.contactNew.Font = new System.Drawing.Font("Myanmar Text", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.contactNew.Location = new System.Drawing.Point(99, 31);
-            this.contactNew.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.contactNew.Location = new System.Drawing.Point(12, 11);
             this.contactNew.Name = "contactNew";
-            this.contactNew.Size = new System.Drawing.Size(213, 36);
+            this.contactNew.Size = new System.Drawing.Size(272, 29);
             this.contactNew.TabIndex = 1;
             this.contactNew.Text = "New Contact";
             this.contactNew.UseVisualStyleBackColor = true;
@@ -58,10 +59,9 @@ namespace _03DTP_Contacts_List
             this.listView1.Font = new System.Drawing.Font("Myanmar Text", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listView1.GridLines = true;
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(333, 31);
-            this.listView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listView1.Location = new System.Drawing.Point(12, 46);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(362, 352);
+            this.listView1.Size = new System.Drawing.Size(276, 287);
             this.listView1.TabIndex = 3;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -86,26 +86,47 @@ namespace _03DTP_Contacts_List
             // contactsLoad
             // 
             this.contactsLoad.Font = new System.Drawing.Font("Myanmar Text", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.contactsLoad.Location = new System.Drawing.Point(16, 511);
-            this.contactsLoad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.contactsLoad.Location = new System.Drawing.Point(12, 368);
             this.contactsLoad.Name = "contactsLoad";
-            this.contactsLoad.Size = new System.Drawing.Size(151, 28);
+            this.contactsLoad.Size = new System.Drawing.Size(113, 23);
             this.contactsLoad.TabIndex = 4;
             this.contactsLoad.Text = "Load Contacts File";
             this.contactsLoad.UseVisualStyleBackColor = true;
             this.contactsLoad.Click += new System.EventHandler(this.contactsLoad_Click);
             // 
+            // contactEdit
+            // 
+            this.contactEdit.Font = new System.Drawing.Font("Myanmar Text", 8.25F);
+            this.contactEdit.Location = new System.Drawing.Point(12, 339);
+            this.contactEdit.Name = "contactEdit";
+            this.contactEdit.Size = new System.Drawing.Size(102, 23);
+            this.contactEdit.TabIndex = 5;
+            this.contactEdit.Text = "Edit Contact";
+            this.contactEdit.UseVisualStyleBackColor = true;
+            this.contactEdit.Click += new System.EventHandler(this.contactEdit_Click);
+            // 
+            // contactDelete
+            // 
+            this.contactDelete.Font = new System.Drawing.Font("Myanmar Text", 8.25F);
+            this.contactDelete.Location = new System.Drawing.Point(182, 339);
+            this.contactDelete.Name = "contactDelete";
+            this.contactDelete.Size = new System.Drawing.Size(102, 23);
+            this.contactDelete.TabIndex = 6;
+            this.contactDelete.Text = "Delete Contact";
+            this.contactDelete.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.ClientSize = new System.Drawing.Size(301, 450);
+            this.Controls.Add(this.contactDelete);
+            this.Controls.Add(this.contactEdit);
             this.Controls.Add(this.contactsLoad);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.contactNew);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form1";
-            this.Text = "D";
+            this.Text = "Contact Storage";
             this.ResumeLayout(false);
 
         }
@@ -118,6 +139,8 @@ namespace _03DTP_Contacts_List
         private System.Windows.Forms.ColumnHeader contNum;
         private System.Windows.Forms.ColumnHeader contAge;
         private System.Windows.Forms.Button contactsLoad;
+        private System.Windows.Forms.Button contactEdit;
+        private System.Windows.Forms.Button contactDelete;
     }
 }
 

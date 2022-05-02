@@ -25,20 +25,16 @@ namespace _03DTP_Contacts_List
         public void createContact()
         {
             ListViewItem lvi = new ListViewItem(contactName);
-            lvi.SubItems.Add(contactAge.ToString());
             lvi.SubItems.Add(contactNum.ToString());
+            lvi.SubItems.Add(contactAge.ToString());
             listView1.Items.Add(lvi);
 
-            File.AppendAllText(filePath, $"\n{contactName},{contactAge.ToString()},{contactNum.ToString()}");
-
-            LoadContacts();
+            File.AppendAllText(filePath, $"{contactName},{contactNum.ToString()},{contactAge.ToString()}\n");
         }
 
         // reads from filepath
         public void LoadContacts()
         {
-
-            // NOT WORKING
             listView1.Items.Clear();
             List<string> lines = File.ReadAllLines(filePath).ToList();
             foreach (string line in lines)
@@ -57,15 +53,17 @@ namespace _03DTP_Contacts_List
             InitializeComponent();
         }
 
+        // For counting purposes, might have to remove.
         public class global
         {
             public static int contactCount = 0;
             public static int num = contactCount;
         }
 
+        // Creates new Contact_Page1 and pauses Form1.
         private void contactNew_Click_1(object sender, EventArgs e)
         {
-            // Creates the form
+            
             global.num++;
 
             Form newContact = new Contact_Page1();
@@ -84,14 +82,21 @@ namespace _03DTP_Contacts_List
             }
         }
 
+        // Runs after createContact is closed, pulling information from Contact_Page1 into Form1.
         private void Form1_Load(object sender, EventArgs e)
         {
             LoadContacts();
         }
 
+        // Mainly for debugging, will probably remove in later versions.
         private void contactsLoad_Click(object sender, EventArgs e)
         {
             LoadContacts();
+        }
+
+        private void contactEdit_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -12,7 +12,7 @@ namespace _03DTP_Contacts_List
 {
     public partial class Contact_Page1 : Form
     {
-        public static string name = "";
+        public static string name = "John Smith";
         public static int number = 0;
         public static int age = 0;
 
@@ -23,8 +23,8 @@ namespace _03DTP_Contacts_List
             editNumber.Enabled = false;
         }
 
-        // use a writefile instead
-
+  
+        // Activates the Name textbox
         private void btnName_Click(object sender, EventArgs e)
         {
             editName.Enabled = true;
@@ -32,13 +32,12 @@ namespace _03DTP_Contacts_List
             editName.Text = "";
 
         }
+        // Readies the contact name to be passed into Form1 
         private void okName_Click(object sender, EventArgs e)
         {
             editName.Enabled = false;
-            string name = editName.Text;
+            name = editName.Text;
             displayName.Text = name;
-            // need to add to the form1 list
-            // use writefile instead, push to the list in Form1
         }
 
 
