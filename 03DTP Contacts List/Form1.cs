@@ -21,6 +21,23 @@ namespace _03DTP_Contacts_List
 
         string filePath = @"contactStorage.txt";
 
+
+        // For counting purposes, might have to remove.
+        public class global
+        {
+            public static int contactCount = 0;
+            public static int num = contactCount;
+        }
+        
+        // Ensures all buttons are working correctly.
+        public Form1()
+        {
+            InitializeComponent();
+            contactDelete.Enabled = false;
+            contactEdit.Enabled = false;
+            this.ActiveControl = contactNew;
+        }
+
         // writes to filepath
         public void createContact()
         {
@@ -48,17 +65,9 @@ namespace _03DTP_Contacts_List
             }
         }
 
-        public Form1()
-        {
-            InitializeComponent();
-        }
+        
 
-        // For counting purposes, might have to remove.
-        public class global
-        {
-            public static int contactCount = 0;
-            public static int num = contactCount;
-        }
+        
 
         // Creates new Contact_Page1 and pauses Form1.
         private void contactNew_Click_1(object sender, EventArgs e)
@@ -97,6 +106,38 @@ namespace _03DTP_Contacts_List
         private void contactEdit_Click(object sender, EventArgs e)
         {
 
+        }
+
+        // Allows for the contact to be edited/deleted.
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            contactDelete.Enabled = true;
+            contactEdit.Enabled = true;
+        }
+
+        // Removes the contact from both contactStorage and listView1.
+        private void contactDelete_Click(object sender, EventArgs e)
+        {
+            int selectedIndex = listView1.FocusedItem.Index;
+            List<string> allLines = File.ReadAllLines(filePath).ToList();
+
+            allLines.RemoveAt(selectedIndex);
+
+            File.WriteAllLines(filePath, allLines);
+            LoadContacts();
+
+            global.num--;
+            global.contactCount--;
+            contactDelete.Enabled = false;
+        }
+
+        // Clears all text from contactStorage.txt.
+        private void contactsClear_Click(object sender, EventArgs e)
+        {
+            listView1.Items.Clear();
+            File.WriteAllText(filePath, $"{string.Empty}");
+            global.num = 0;
+            global.contactCount = 0;
         }
     }
 }
