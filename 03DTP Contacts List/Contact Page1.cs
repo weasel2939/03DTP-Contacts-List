@@ -6,14 +6,16 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
+
 
 namespace _03DTP_Contacts_List
 {
     public partial class Contact_Page1 : Form
     {
         public static string name = "John Smith";
-        public static int number = 0;
+        public static string number = "";
         public static int age = 0;
 
         public Contact_Page1()
@@ -51,20 +53,18 @@ namespace _03DTP_Contacts_List
 
         private void okNumber_Click(object sender, EventArgs e)
         {
-            number = 0;
-            bool isNumber = false;
-            isNumber = int.TryParse(editNumber.Text, out number);
-
-            if (!isNumber)
-            {
-                editNumber.Text = "";
-                this.ActiveControl = editNumber;
-            }
-            else
+            number = "";
+            
+            if (Regex.IsMatch(number, @"^\d+$"))
             {
                 displayNumber.Text = editNumber.Text;
                 editNumber.Enabled = false;
-                number = int.Parse(editNumber.Text);
+                number = editNumber.Text;
+            }
+            else
+            {
+                editNumber.Text = "";
+                this.ActiveControl = editNumber;
 
             }
 

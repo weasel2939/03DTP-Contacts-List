@@ -16,7 +16,7 @@ namespace _03DTP_Contacts_List
         public static bool editConfirm = false;
         public static bool createConfirm = false;
         public static string contactName = string.Empty;
-        public static int contactNum = 0;
+        public static string contactNum = "";
         public static int contactAge = 0;
 
         string filePath = @"contactStorage.txt";
@@ -105,8 +105,13 @@ namespace _03DTP_Contacts_List
 
         private void contactEdit_Click(object sender, EventArgs e)
         {
+            // make new contact_page but name it contact edit
+            // do the opposite of when you make a contact, pull info from form1 and set the display boxes
+            // allow the user to edit info, but don't override if it isn't needed, just send the variables back over
+            //
 
         }
+
 
         // Allows for the contact to be edited/deleted.
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
