@@ -18,6 +18,10 @@ namespace _03DTP_Contacts_List
         public static string contactName = string.Empty;
         public static string contactNum = "";
         public static int contactAge = 0;
+        // For editing
+        public static string edit_contactName = string.Empty;
+        public static string edit_contactNum = "";
+        public static int edit_contactAge = 0;
 
         string filePath = @"contactStorage.txt";
 
@@ -42,11 +46,11 @@ namespace _03DTP_Contacts_List
         public void createContact()
         {
             ListViewItem lvi = new ListViewItem(contactName);
-            lvi.SubItems.Add(contactNum.ToString());
+            lvi.SubItems.Add(contactNum);
             lvi.SubItems.Add(contactAge.ToString());
             listView1.Items.Add(lvi);
 
-            File.AppendAllText(filePath, $"{contactName},{contactNum.ToString()},{contactAge.ToString()}\n");
+            File.AppendAllText(filePath, $"{contactName},{contactNum},{contactAge.ToString()}\n");
         }
 
         // reads from filepath
@@ -64,11 +68,6 @@ namespace _03DTP_Contacts_List
                 listView1.Items.Add(lvi);
             }
         }
-
-        
-
-        
-
         // Creates new Contact_Page1 and pauses Form1.
         private void contactNew_Click_1(object sender, EventArgs e)
         {
@@ -108,8 +107,21 @@ namespace _03DTP_Contacts_List
             // make new contact_page but name it contact edit
             // do the opposite of when you make a contact, pull info from form1 and set the display boxes
             // allow the user to edit info, but don't override if it isn't needed, just send the variables back over
-            //
 
+            edit_contactName = listView1.FocusedItem.SubItems[0].ToString();
+            edit_contactNum = listView1.FocusedItem.SubItems[1].ToString();
+            // this needs to be parsed diferently
+            edit_contactAge = int.Parse(listView1.FocusedItem.SubItems[2].ToString());
+
+            Form contactEdit = new Contact_Edit();
+            contactEdit.Text = ("Contact " + global.num);
+
+            contactEdit.ShowDialog();
+
+            if (editConfirm)
+            {
+                // take the new information and reinsert it into the list and filepath
+            }
         }
 
 

@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Contact Edit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contact Edit.Designer.cs">
+      <DependentUpon>Contact Edit.cs</DependentUpon>
+    </Compile>
     <Compile Include="Contact Page1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,6 +66,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Contact Edit.resx">
+      <DependentUpon>Contact Edit.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Contact Page1.resx">
       <DependentUpon>Contact Page1.cs</DependentUpon>
     </EmbeddedResource>

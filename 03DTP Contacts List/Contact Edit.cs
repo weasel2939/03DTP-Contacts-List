@@ -10,23 +10,19 @@ using System.Text.RegularExpressions;
 using System.IO;
 using System.Windows.Forms;
 
-
 namespace _03DTP_Contacts_List
 {
-    public partial class Contact_Page1 : Form
+    public partial class Contact_Edit : Form
     {
-        public static string name = "John Smith";
-        public static string number = "";
-        public static int age = 0;
+        public static string name = Form1.edit_contactName;
+        public static string number = Form1.edit_contactNum;
+        public static int age = Form1.edit_contactAge;
 
-        public Contact_Page1()
+        public Contact_Edit()
         {
             InitializeComponent();
-            editName.Enabled = false;
-            editNumber.Enabled = false;
         }
 
-  
         // Activates the Name textbox
         private void btnName_Click(object sender, EventArgs e)
         {
@@ -54,11 +50,13 @@ namespace _03DTP_Contacts_List
 
         private void okNumber_Click(object sender, EventArgs e)
         {
-            number = editNumber.Text;
+            number = "";
+
             if (Regex.IsMatch(number, @"^\d+$"))
             {
                 displayNumber.Text = editNumber.Text;
                 editNumber.Enabled = false;
+                number = editNumber.Text;
             }
             else
             {
@@ -95,12 +93,12 @@ namespace _03DTP_Contacts_List
             }
         }
 
-        private void okAdd_Click(object sender, EventArgs e)
+        private void okEdit_Click(object sender, EventArgs e)
         {
-            Form1.contactName = name;
-            Form1.contactNum = number;
-            Form1.contactAge = age;
-            Form1.createConfirm = true;
+            Form1.edit_contactName = name;
+            Form1.edit_contactNum = number;
+            Form1.edit_contactAge = age;
+            Form1.editConfirm = true;
             this.Close();
         }
     }
