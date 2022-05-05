@@ -17,7 +17,7 @@ namespace _03DTP_Contacts_List
     {
         public static string name = "John Smith";
         public static string number = "";
-        public static int age = 0;
+        public static string age = "";
 
         public Contact_Page1()
         {
@@ -57,7 +57,7 @@ namespace _03DTP_Contacts_List
             number = editNumber.Text;
             if (Regex.IsMatch(number, @"^\d+$"))
             {
-                displayNumber.Text = editNumber.Text;
+                displayNumber.Text = number;
                 editNumber.Enabled = false;
             }
             else
@@ -78,20 +78,17 @@ namespace _03DTP_Contacts_List
 
         private void okAge_Click(object sender, EventArgs e)
         {
-            age = 0;
-            bool isNumber = false;
-            isNumber = int.TryParse(editAge.Text, out age);
-
-            if (!isNumber)
+            age = editAge.Text;
+            if (Regex.IsMatch(age, @"^\d+$"))
             {
-                editAge.Text = "";
-                this.ActiveControl = editAge;
+                displayAge.Text = ("Age: [ " + age + " ]");
+                editAge.Enabled = false;
             }
             else
             {
-                editAge.Enabled = false;
-                displayAge.Text = ("Age: [ " + age + " ]");
-                age = int.Parse(editAge.Text);
+                editAge.Text = "";
+                this.ActiveControl = editAge;
+
             }
         }
 

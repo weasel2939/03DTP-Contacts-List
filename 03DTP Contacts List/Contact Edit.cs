@@ -16,11 +16,14 @@ namespace _03DTP_Contacts_List
     {
         public static string name = Form1.edit_contactName;
         public static string number = Form1.edit_contactNum;
-        public static int age = Form1.edit_contactAge;
+        public static string age = Form1.edit_contactAge;
 
         public Contact_Edit()
         {
             InitializeComponent();
+            displayName.Text = name;
+            displayNumber.Text = number;
+            displayAge.Text = ("Age: [ " + age + " ]");
         }
 
         // Activates the Name textbox
@@ -50,13 +53,11 @@ namespace _03DTP_Contacts_List
 
         private void okNumber_Click(object sender, EventArgs e)
         {
-            number = "";
-
+            number = editNumber.Text;
             if (Regex.IsMatch(number, @"^\d+$"))
             {
-                displayNumber.Text = editNumber.Text;
+                displayNumber.Text = number;
                 editNumber.Enabled = false;
-                number = editNumber.Text;
             }
             else
             {
@@ -76,20 +77,16 @@ namespace _03DTP_Contacts_List
 
         private void okAge_Click(object sender, EventArgs e)
         {
-            age = 0;
-            bool isNumber = false;
-            isNumber = int.TryParse(editAge.Text, out age);
-
-            if (!isNumber)
+            age = editAge.Text;
+            if (Regex.IsMatch(age, @"^\d+$"))
             {
-                editAge.Text = "";
-                this.ActiveControl = editAge;
+                displayAge.Text = ("Age: [ " + age + " ]");
+                editAge.Enabled = false;
             }
             else
             {
-                editAge.Enabled = false;
-                displayAge.Text = ("Age: [ " + age + " ]");
-                age = int.Parse(editAge.Text);
+                editAge.Text = "";
+                this.ActiveControl = editAge;
             }
         }
 

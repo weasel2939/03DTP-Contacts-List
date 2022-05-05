@@ -17,11 +17,13 @@ namespace _03DTP_Contacts_List
         public static bool createConfirm = false;
         public static string contactName = string.Empty;
         public static string contactNum = "";
-        public static int contactAge = 0;
+        public static string contactAge = "";
         // For editing
         public static string edit_contactName = string.Empty;
         public static string edit_contactNum = "";
-        public static int edit_contactAge = 0;
+        public static string edit_contactAge = "";
+
+        public static int selectedIndex = 0;
 
         string filePath = @"contactStorage.txt";
 
@@ -29,8 +31,10 @@ namespace _03DTP_Contacts_List
         // For counting purposes, might have to remove.
         public class global
         {
-            public static int contactCount = 0;
+            public static string[] lines = { "placeholder" };
+            public static int contactCount = lines.Count();
             public static int num = contactCount;
+
         }
         
         // Ensures all buttons are working correctly.
@@ -40,6 +44,7 @@ namespace _03DTP_Contacts_List
             contactDelete.Enabled = false;
             contactEdit.Enabled = false;
             this.ActiveControl = contactNew;
+
         }
 
         // writes to filepath
@@ -67,6 +72,9 @@ namespace _03DTP_Contacts_List
                 lvi.SubItems.Add(sections[2]);
                 listView1.Items.Add(lvi);
             }
+
+            global.lines = File.ReadAllLines(filePath);
+            global.contactCount = global.lines.Count();
         }
         // Creates new Contact_Page1 and pauses Form1.
         private void contactNew_Click_1(object sender, EventArgs e)
@@ -82,6 +90,7 @@ namespace _03DTP_Contacts_List
             if (createConfirm)
             {
                 createContact();
+                createConfirm = false;
             }
 
             if (global.num > 1)
@@ -107,20 +116,26 @@ namespace _03DTP_Contacts_List
             // make new contact_page but name it contact edit
             // do the opposite of when you make a contact, pull info from form1 and set the display boxes
             // allow the user to edit info, but don't override if it isn't needed, just send the variables back over
-
-            edit_contactName = listView1.FocusedItem.SubItems[0].ToString();
-            edit_contactNum = listView1.FocusedItem.SubItems[1].ToString();
-            // this needs to be parsed diferently
-            edit_contactAge = int.Parse(listView1.FocusedItem.SubItems[2].ToString());
+            
 
             Form contactEdit = new Contact_Edit();
-            contactEdit.Text = ("Contact " + global.num);
+            int editNumber = selectedIndex + 1;
+            contactEdit.Text = ("Contact " + editNumber);
 
             contactEdit.ShowDialog();
-
+            contactEdit.Enabled = false;
             if (editConfirm)
             {
                 // take the new information and reinsert it into the list and filepath
+                List<string> allLines = File.ReadAllLines(filePath).ToList();
+
+                allLines.RemoveAt(selectedIndex);
+                allLines.Insert(selectedIndex, $"{edit_contactName},{edit_contactNum},{edit_contactAge.ToString()}");
+                //
+                File.WriteAllLines(filePath, allLines);
+                selectedIndex = 0;
+                LoadContacts();
+                //
             }
         }
 
@@ -129,7 +144,14 @@ namespace _03DTP_Contacts_List
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
             contactDelete.Enabled = true;
+
+            // For editing.
             contactEdit.Enabled = true;
+            selectedIndex = listView1.FocusedItem.Index;
+            // DOESN'T WORK ( TRY DIRECTLY EDITING CONTACT_EDIT VARIABLES )
+            edit_contactName = listView1.FocusedItem.SubItems[0].Text;
+            edit_contactNum = listView1.FocusedItem.SubItems[1].Text;
+            edit_contactAge = listView1.FocusedItem.SubItems[2].Text;
         }
 
         // Removes the contact from both contactStorage and listView1.
