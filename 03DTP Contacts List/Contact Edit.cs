@@ -21,6 +21,9 @@ namespace _03DTP_Contacts_List
         public Contact_Edit()
         {
             InitializeComponent();
+            name = Form1.edit_contactName;
+            number = Form1.edit_contactNum;
+            age = Form1.edit_contactAge;
             displayName.Text = name;
             displayNumber.Text = number;
             displayAge.Text = ("Age: [ " + age + " ]");

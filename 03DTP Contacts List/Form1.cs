@@ -113,20 +113,21 @@ namespace _03DTP_Contacts_List
 
         private void contactEdit_Click(object sender, EventArgs e)
         {
-            // make new contact_page but name it contact edit
-            // do the opposite of when you make a contact, pull info from form1 and set the display boxes
-            // allow the user to edit info, but don't override if it isn't needed, just send the variables back over
-            
-
+            // Creates new form based on Contact_Edit.
+            // Selects and assigns the correct value for each contact.
             Form contactEdit = new Contact_Edit();
             int editNumber = selectedIndex + 1;
             contactEdit.Text = ("Contact " + editNumber);
-
+            
+            // Pauses Form1 and initiates Contact_Edit.
             contactEdit.ShowDialog();
+
+            // Disables the user's Edit button
             contactEdit.Enabled = false;
+
             if (editConfirm)
             {
-                // take the new information and reinsert it into the list and filepath
+                // takes the new information and reinsert it into the list and filepath
                 List<string> allLines = File.ReadAllLines(filePath).ToList();
 
                 allLines.RemoveAt(selectedIndex);
@@ -148,7 +149,6 @@ namespace _03DTP_Contacts_List
             // For editing.
             contactEdit.Enabled = true;
             selectedIndex = listView1.FocusedItem.Index;
-            // DOESN'T WORK ( TRY DIRECTLY EDITING CONTACT_EDIT VARIABLES )
             edit_contactName = listView1.FocusedItem.SubItems[0].Text;
             edit_contactNum = listView1.FocusedItem.SubItems[1].Text;
             edit_contactAge = listView1.FocusedItem.SubItems[2].Text;
