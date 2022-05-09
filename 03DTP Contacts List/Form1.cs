@@ -41,6 +41,7 @@ namespace _03DTP_Contacts_List
         public Form1()
         {
             InitializeComponent();
+            LoadContacts();
             contactDelete.Enabled = false;
             contactEdit.Enabled = false;
             this.ActiveControl = contactNew;
@@ -75,6 +76,7 @@ namespace _03DTP_Contacts_List
 
             global.lines = File.ReadAllLines(filePath);
             global.contactCount = global.lines.Count();
+            global.num = global.contactCount;
         }
         // Creates new Contact_Page1 and pauses Form1.
         private void contactNew_Click_1(object sender, EventArgs e)
@@ -91,12 +93,17 @@ namespace _03DTP_Contacts_List
             {
                 createContact();
                 createConfirm = false;
+                if (global.num > 1)
+                {
+                global.contactCount++;
+                }
+            }
+            else
+            {
+                global.num--;
             }
 
-            if (global.num > 1)
-            {
-                global.contactCount++;
-            }
+            
         }
 
         // Runs after createContact is closed, pulling information from Contact_Page1 into Form1.

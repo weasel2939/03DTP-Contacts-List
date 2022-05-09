@@ -49,7 +49,7 @@ namespace _03DTP_Contacts_List
             this.btnName.Location = new System.Drawing.Point(22, 96);
             this.btnName.Name = "btnName";
             this.btnName.Size = new System.Drawing.Size(75, 23);
-            this.btnName.TabIndex = 0;
+            this.btnName.TabIndex = 1;
             this.btnName.Text = "Edit Name";
             this.btnName.UseVisualStyleBackColor = true;
             this.btnName.Click += new System.EventHandler(this.btnName_Click);
@@ -59,7 +59,7 @@ namespace _03DTP_Contacts_List
             this.btnNumber.Location = new System.Drawing.Point(22, 178);
             this.btnNumber.Name = "btnNumber";
             this.btnNumber.Size = new System.Drawing.Size(75, 23);
-            this.btnNumber.TabIndex = 1;
+            this.btnNumber.TabIndex = 4;
             this.btnNumber.Text = "Edit Number";
             this.btnNumber.UseVisualStyleBackColor = true;
             this.btnNumber.Click += new System.EventHandler(this.btnNumber_Click);
@@ -107,7 +107,7 @@ namespace _03DTP_Contacts_List
             this.okNumber.Location = new System.Drawing.Point(165, 207);
             this.okNumber.Name = "okNumber";
             this.okNumber.Size = new System.Drawing.Size(75, 20);
-            this.okNumber.TabIndex = 7;
+            this.okNumber.TabIndex = 6;
             this.okNumber.Text = "OK";
             this.okNumber.UseVisualStyleBackColor = true;
             this.okNumber.Click += new System.EventHandler(this.okNumber_Click);
@@ -118,14 +118,14 @@ namespace _03DTP_Contacts_List
             this.editNumber.Location = new System.Drawing.Point(22, 207);
             this.editNumber.Name = "editNumber";
             this.editNumber.Size = new System.Drawing.Size(122, 20);
-            this.editNumber.TabIndex = 6;
+            this.editNumber.TabIndex = 5;
             // 
             // okAge
             // 
             this.okAge.Location = new System.Drawing.Point(165, 287);
             this.okAge.Name = "okAge";
             this.okAge.Size = new System.Drawing.Size(75, 20);
-            this.okAge.TabIndex = 10;
+            this.okAge.TabIndex = 9;
             this.okAge.Text = "OK";
             this.okAge.UseVisualStyleBackColor = true;
             this.okAge.Click += new System.EventHandler(this.okAge_Click);
@@ -136,14 +136,14 @@ namespace _03DTP_Contacts_List
             this.editAge.Location = new System.Drawing.Point(22, 287);
             this.editAge.Name = "editAge";
             this.editAge.Size = new System.Drawing.Size(122, 20);
-            this.editAge.TabIndex = 9;
+            this.editAge.TabIndex = 8;
             // 
             // btnAge
             // 
             this.btnAge.Location = new System.Drawing.Point(22, 258);
             this.btnAge.Name = "btnAge";
             this.btnAge.Size = new System.Drawing.Size(75, 23);
-            this.btnAge.TabIndex = 8;
+            this.btnAge.TabIndex = 7;
             this.btnAge.Text = "Edit Age";
             this.btnAge.UseVisualStyleBackColor = true;
             this.btnAge.Click += new System.EventHandler(this.btnAge_Click);
@@ -164,7 +164,7 @@ namespace _03DTP_Contacts_List
             this.okAdd.Location = new System.Drawing.Point(22, 354);
             this.okAdd.Name = "okAdd";
             this.okAdd.Size = new System.Drawing.Size(218, 32);
-            this.okAdd.TabIndex = 12;
+            this.okAdd.TabIndex = 10;
             this.okAdd.Text = "Create New Contact";
             this.okAdd.UseVisualStyleBackColor = true;
             this.okAdd.Click += new System.EventHandler(this.okAdd_Click);

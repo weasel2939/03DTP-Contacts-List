@@ -55,7 +55,7 @@ namespace _03DTP_Contacts_List
         private void okNumber_Click(object sender, EventArgs e)
         {
             number = editNumber.Text;
-            if (Regex.IsMatch(number, @"^\d+$"))
+            if (Regex.IsMatch(number, @"^[\d\s]+$"))
             {
                 displayNumber.Text = number;
                 editNumber.Enabled = false;
@@ -79,7 +79,7 @@ namespace _03DTP_Contacts_List
         private void okAge_Click(object sender, EventArgs e)
         {
             age = editAge.Text;
-            if (Regex.IsMatch(age, @"^\d+$"))
+            if (Regex.IsMatch(age, @"^[\d\s]+$"))
             {
                 displayAge.Text = ("Age: [ " + age + " ]");
                 editAge.Enabled = false;
