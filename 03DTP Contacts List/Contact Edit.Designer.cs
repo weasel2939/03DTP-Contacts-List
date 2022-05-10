@@ -47,10 +47,10 @@ namespace _03DTP_Contacts_List
             // okEdit
             // 
             this.okEdit.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.okEdit.Location = new System.Drawing.Point(22, 355);
+            this.okEdit.Location = new System.Drawing.Point(15, 301);
             this.okEdit.Name = "okEdit";
-            this.okEdit.Size = new System.Drawing.Size(218, 32);
-            this.okEdit.TabIndex = 38;
+            this.okEdit.Size = new System.Drawing.Size(225, 32);
+            this.okEdit.TabIndex = 10;
             this.okEdit.Text = "Confirm Edits";
             this.okEdit.UseVisualStyleBackColor = true;
             this.okEdit.Click += new System.EventHandler(this.okEdit_Click);
@@ -59,7 +59,7 @@ namespace _03DTP_Contacts_List
             // 
             this.displayAge.AutoSize = true;
             this.displayAge.Font = new System.Drawing.Font("Microsoft Tai Le", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.displayAge.Location = new System.Drawing.Point(27, 71);
+            this.displayAge.Location = new System.Drawing.Point(27, 64);
             this.displayAge.Name = "displayAge";
             this.displayAge.Size = new System.Drawing.Size(54, 16);
             this.displayAge.TabIndex = 37;
@@ -67,10 +67,10 @@ namespace _03DTP_Contacts_List
             // 
             // okAge
             // 
-            this.okAge.Location = new System.Drawing.Point(165, 288);
+            this.okAge.Location = new System.Drawing.Point(165, 251);
             this.okAge.Name = "okAge";
             this.okAge.Size = new System.Drawing.Size(75, 20);
-            this.okAge.TabIndex = 36;
+            this.okAge.TabIndex = 9;
             this.okAge.Text = "OK";
             this.okAge.UseVisualStyleBackColor = true;
             this.okAge.Click += new System.EventHandler(this.okAge_Click);
@@ -78,27 +78,27 @@ namespace _03DTP_Contacts_List
             // editAge
             // 
             this.editAge.Enabled = false;
-            this.editAge.Location = new System.Drawing.Point(22, 288);
+            this.editAge.Location = new System.Drawing.Point(15, 251);
             this.editAge.Name = "editAge";
             this.editAge.Size = new System.Drawing.Size(122, 20);
-            this.editAge.TabIndex = 35;
+            this.editAge.TabIndex = 8;
             // 
             // btnAge
             // 
-            this.btnAge.Location = new System.Drawing.Point(22, 259);
+            this.btnAge.Location = new System.Drawing.Point(15, 226);
             this.btnAge.Name = "btnAge";
             this.btnAge.Size = new System.Drawing.Size(75, 23);
-            this.btnAge.TabIndex = 34;
+            this.btnAge.TabIndex = 7;
             this.btnAge.Text = "Edit Age";
             this.btnAge.UseVisualStyleBackColor = true;
             this.btnAge.Click += new System.EventHandler(this.btnAge_Click);
             // 
             // okNumber
             // 
-            this.okNumber.Location = new System.Drawing.Point(165, 208);
+            this.okNumber.Location = new System.Drawing.Point(165, 182);
             this.okNumber.Name = "okNumber";
             this.okNumber.Size = new System.Drawing.Size(75, 20);
-            this.okNumber.TabIndex = 33;
+            this.okNumber.TabIndex = 6;
             this.okNumber.Text = "OK";
             this.okNumber.UseVisualStyleBackColor = true;
             this.okNumber.Click += new System.EventHandler(this.okNumber_Click);
@@ -106,16 +106,16 @@ namespace _03DTP_Contacts_List
             // editNumber
             // 
             this.editNumber.Enabled = false;
-            this.editNumber.Location = new System.Drawing.Point(22, 208);
+            this.editNumber.Location = new System.Drawing.Point(15, 182);
             this.editNumber.Name = "editNumber";
             this.editNumber.Size = new System.Drawing.Size(122, 20);
-            this.editNumber.TabIndex = 32;
+            this.editNumber.TabIndex = 5;
             // 
             // displayNumber
             // 
             this.displayNumber.AutoSize = true;
             this.displayNumber.Font = new System.Drawing.Font("Microsoft Tai Le", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.displayNumber.Location = new System.Drawing.Point(27, 48);
+            this.displayNumber.Location = new System.Drawing.Point(25, 42);
             this.displayNumber.Name = "displayNumber";
             this.displayNumber.Size = new System.Drawing.Size(97, 16);
             this.displayNumber.TabIndex = 31;
@@ -125,7 +125,7 @@ namespace _03DTP_Contacts_List
             // 
             this.displayName.AutoSize = true;
             this.displayName.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.displayName.Location = new System.Drawing.Point(15, 19);
+            this.displayName.Location = new System.Drawing.Point(15, 15);
             this.displayName.Name = "displayName";
             this.displayName.Size = new System.Drawing.Size(93, 21);
             this.displayName.TabIndex = 30;
@@ -133,10 +133,10 @@ namespace _03DTP_Contacts_List
             // 
             // okName
             // 
-            this.okName.Location = new System.Drawing.Point(165, 126);
+            this.okName.Location = new System.Drawing.Point(165, 121);
             this.okName.Name = "okName";
             this.okName.Size = new System.Drawing.Size(75, 20);
-            this.okName.TabIndex = 29;
+            this.okName.TabIndex = 3;
             this.okName.Text = "OK";
             this.okName.UseVisualStyleBackColor = true;
             this.okName.Click += new System.EventHandler(this.okName_Click);
@@ -144,27 +144,27 @@ namespace _03DTP_Contacts_List
             // editName
             // 
             this.editName.Enabled = false;
-            this.editName.Location = new System.Drawing.Point(22, 126);
+            this.editName.Location = new System.Drawing.Point(15, 121);
             this.editName.Name = "editName";
             this.editName.Size = new System.Drawing.Size(122, 20);
-            this.editName.TabIndex = 28;
+            this.editName.TabIndex = 2;
             // 
             // btnNumber
             // 
-            this.btnNumber.Location = new System.Drawing.Point(22, 179);
+            this.btnNumber.Location = new System.Drawing.Point(15, 157);
             this.btnNumber.Name = "btnNumber";
             this.btnNumber.Size = new System.Drawing.Size(75, 23);
-            this.btnNumber.TabIndex = 27;
+            this.btnNumber.TabIndex = 4;
             this.btnNumber.Text = "Edit Number";
             this.btnNumber.UseVisualStyleBackColor = true;
             this.btnNumber.Click += new System.EventHandler(this.btnNumber_Click);
             // 
             // btnName
             // 
-            this.btnName.Location = new System.Drawing.Point(22, 97);
+            this.btnName.Location = new System.Drawing.Point(15, 96);
             this.btnName.Name = "btnName";
             this.btnName.Size = new System.Drawing.Size(75, 23);
-            this.btnName.TabIndex = 26;
+            this.btnName.TabIndex = 1;
             this.btnName.Text = "Edit Name";
             this.btnName.UseVisualStyleBackColor = true;
             this.btnName.Click += new System.EventHandler(this.btnName_Click);
@@ -173,7 +173,7 @@ namespace _03DTP_Contacts_List
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(264, 450);
+            this.ClientSize = new System.Drawing.Size(254, 353);
             this.Controls.Add(this.okEdit);
             this.Controls.Add(this.displayAge);
             this.Controls.Add(this.okAge);

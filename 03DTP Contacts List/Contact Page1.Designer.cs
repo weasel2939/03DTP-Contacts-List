@@ -46,7 +46,7 @@ namespace _03DTP_Contacts_List
             // 
             // btnName
             // 
-            this.btnName.Location = new System.Drawing.Point(22, 96);
+            this.btnName.Location = new System.Drawing.Point(15, 96);
             this.btnName.Name = "btnName";
             this.btnName.Size = new System.Drawing.Size(75, 23);
             this.btnName.TabIndex = 1;
@@ -56,7 +56,7 @@ namespace _03DTP_Contacts_List
             // 
             // btnNumber
             // 
-            this.btnNumber.Location = new System.Drawing.Point(22, 178);
+            this.btnNumber.Location = new System.Drawing.Point(15, 157);
             this.btnNumber.Name = "btnNumber";
             this.btnNumber.Size = new System.Drawing.Size(75, 23);
             this.btnNumber.TabIndex = 4;
@@ -67,14 +67,14 @@ namespace _03DTP_Contacts_List
             // editName
             // 
             this.editName.Enabled = false;
-            this.editName.Location = new System.Drawing.Point(22, 125);
+            this.editName.Location = new System.Drawing.Point(15, 121);
             this.editName.Name = "editName";
             this.editName.Size = new System.Drawing.Size(122, 20);
             this.editName.TabIndex = 2;
             // 
             // okName
             // 
-            this.okName.Location = new System.Drawing.Point(165, 125);
+            this.okName.Location = new System.Drawing.Point(165, 121);
             this.okName.Name = "okName";
             this.okName.Size = new System.Drawing.Size(75, 20);
             this.okName.TabIndex = 3;
@@ -86,7 +86,7 @@ namespace _03DTP_Contacts_List
             // 
             this.displayName.AutoSize = true;
             this.displayName.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.displayName.Location = new System.Drawing.Point(15, 18);
+            this.displayName.Location = new System.Drawing.Point(15, 15);
             this.displayName.Name = "displayName";
             this.displayName.Size = new System.Drawing.Size(99, 21);
             this.displayName.TabIndex = 4;
@@ -96,7 +96,7 @@ namespace _03DTP_Contacts_List
             // 
             this.displayNumber.AutoSize = true;
             this.displayNumber.Font = new System.Drawing.Font("Microsoft Tai Le", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.displayNumber.Location = new System.Drawing.Point(27, 47);
+            this.displayNumber.Location = new System.Drawing.Point(25, 42);
             this.displayNumber.Name = "displayNumber";
             this.displayNumber.Size = new System.Drawing.Size(97, 16);
             this.displayNumber.TabIndex = 5;
@@ -104,7 +104,7 @@ namespace _03DTP_Contacts_List
             // 
             // okNumber
             // 
-            this.okNumber.Location = new System.Drawing.Point(165, 207);
+            this.okNumber.Location = new System.Drawing.Point(165, 182);
             this.okNumber.Name = "okNumber";
             this.okNumber.Size = new System.Drawing.Size(75, 20);
             this.okNumber.TabIndex = 6;
@@ -115,14 +115,14 @@ namespace _03DTP_Contacts_List
             // editNumber
             // 
             this.editNumber.Enabled = false;
-            this.editNumber.Location = new System.Drawing.Point(22, 207);
+            this.editNumber.Location = new System.Drawing.Point(15, 182);
             this.editNumber.Name = "editNumber";
             this.editNumber.Size = new System.Drawing.Size(122, 20);
             this.editNumber.TabIndex = 5;
             // 
             // okAge
             // 
-            this.okAge.Location = new System.Drawing.Point(165, 287);
+            this.okAge.Location = new System.Drawing.Point(165, 251);
             this.okAge.Name = "okAge";
             this.okAge.Size = new System.Drawing.Size(75, 20);
             this.okAge.TabIndex = 9;
@@ -133,14 +133,14 @@ namespace _03DTP_Contacts_List
             // editAge
             // 
             this.editAge.Enabled = false;
-            this.editAge.Location = new System.Drawing.Point(22, 287);
+            this.editAge.Location = new System.Drawing.Point(15, 251);
             this.editAge.Name = "editAge";
             this.editAge.Size = new System.Drawing.Size(122, 20);
             this.editAge.TabIndex = 8;
             // 
             // btnAge
             // 
-            this.btnAge.Location = new System.Drawing.Point(22, 258);
+            this.btnAge.Location = new System.Drawing.Point(15, 226);
             this.btnAge.Name = "btnAge";
             this.btnAge.Size = new System.Drawing.Size(75, 23);
             this.btnAge.TabIndex = 7;
@@ -152,7 +152,7 @@ namespace _03DTP_Contacts_List
             // 
             this.displayAge.AutoSize = true;
             this.displayAge.Font = new System.Drawing.Font("Microsoft Tai Le", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.displayAge.Location = new System.Drawing.Point(27, 70);
+            this.displayAge.Location = new System.Drawing.Point(27, 64);
             this.displayAge.Name = "displayAge";
             this.displayAge.Size = new System.Drawing.Size(54, 16);
             this.displayAge.TabIndex = 11;
@@ -161,9 +161,9 @@ namespace _03DTP_Contacts_List
             // okAdd
             // 
             this.okAdd.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.okAdd.Location = new System.Drawing.Point(22, 354);
+            this.okAdd.Location = new System.Drawing.Point(15, 301);
             this.okAdd.Name = "okAdd";
-            this.okAdd.Size = new System.Drawing.Size(218, 32);
+            this.okAdd.Size = new System.Drawing.Size(225, 32);
             this.okAdd.TabIndex = 10;
             this.okAdd.Text = "Create New Contact";
             this.okAdd.UseVisualStyleBackColor = true;
@@ -173,7 +173,7 @@ namespace _03DTP_Contacts_List
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(266, 450);
+            this.ClientSize = new System.Drawing.Size(254, 353);
             this.Controls.Add(this.okAdd);
             this.Controls.Add(this.displayAge);
             this.Controls.Add(this.okAge);

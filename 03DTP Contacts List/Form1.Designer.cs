@@ -42,13 +42,17 @@ namespace _03DTP_Contacts_List
             // 
             // contactNew
             // 
-            this.contactNew.Font = new System.Drawing.Font("Myanmar Text", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.contactNew.Location = new System.Drawing.Point(12, 11);
+            this.contactNew.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(219)))), ((int)(((byte)(124)))));
+            this.contactNew.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(176)))), ((int)(((byte)(100)))));
+            this.contactNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.contactNew.Font = new System.Drawing.Font("Myanmar Text", 11F);
+            this.contactNew.Location = new System.Drawing.Point(12, 12);
             this.contactNew.Name = "contactNew";
-            this.contactNew.Size = new System.Drawing.Size(272, 29);
+            this.contactNew.Size = new System.Drawing.Size(276, 28);
             this.contactNew.TabIndex = 1;
             this.contactNew.Text = "New Contact";
-            this.contactNew.UseVisualStyleBackColor = true;
+            this.contactNew.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.contactNew.UseVisualStyleBackColor = false;
             this.contactNew.Click += new System.EventHandler(this.contactNew_Click_1);
             // 
             // listView1
@@ -71,75 +75,88 @@ namespace _03DTP_Contacts_List
             // contName
             // 
             this.contName.Text = "Name";
-            this.contName.Width = 98;
+            this.contName.Width = 100;
             // 
             // contNum
             // 
             this.contNum.Text = "Phone Number";
             this.contNum.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.contNum.Width = 116;
+            this.contNum.Width = 120;
             // 
             // contAge
             // 
             this.contAge.Text = "Age";
             this.contAge.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.contAge.Width = 58;
             // 
             // contactsLoad
             // 
+            this.contactsLoad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(219)))), ((int)(((byte)(124)))));
+            this.contactsLoad.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(176)))), ((int)(((byte)(100)))));
+            this.contactsLoad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.contactsLoad.Font = new System.Drawing.Font("Myanmar Text", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.contactsLoad.Location = new System.Drawing.Point(12, 404);
             this.contactsLoad.Name = "contactsLoad";
             this.contactsLoad.Size = new System.Drawing.Size(113, 23);
             this.contactsLoad.TabIndex = 4;
             this.contactsLoad.Text = "Load Contacts File";
-            this.contactsLoad.UseVisualStyleBackColor = true;
+            this.contactsLoad.UseVisualStyleBackColor = false;
             this.contactsLoad.Click += new System.EventHandler(this.contactsLoad_Click);
             // 
             // contactEdit
             // 
-            this.contactEdit.Font = new System.Drawing.Font("Myanmar Text", 8.25F);
+            this.contactEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(219)))), ((int)(((byte)(124)))));
+            this.contactEdit.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(176)))), ((int)(((byte)(100)))));
+            this.contactEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.contactEdit.Font = new System.Drawing.Font("Myanmar Text", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.contactEdit.Location = new System.Drawing.Point(12, 339);
             this.contactEdit.Name = "contactEdit";
             this.contactEdit.Size = new System.Drawing.Size(102, 23);
             this.contactEdit.TabIndex = 5;
             this.contactEdit.Text = "Edit Contact";
-            this.contactEdit.UseVisualStyleBackColor = true;
+            this.contactEdit.UseVisualStyleBackColor = false;
             this.contactEdit.Click += new System.EventHandler(this.contactEdit_Click);
             // 
             // contactDelete
             // 
-            this.contactDelete.Font = new System.Drawing.Font("Myanmar Text", 8.25F);
-            this.contactDelete.Location = new System.Drawing.Point(182, 339);
+            this.contactDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(219)))), ((int)(((byte)(124)))));
+            this.contactDelete.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(176)))), ((int)(((byte)(100)))));
+            this.contactDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.contactDelete.Font = new System.Drawing.Font("Myanmar Text", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.contactDelete.Location = new System.Drawing.Point(186, 339);
             this.contactDelete.Name = "contactDelete";
             this.contactDelete.Size = new System.Drawing.Size(102, 23);
             this.contactDelete.TabIndex = 6;
             this.contactDelete.Text = "Delete Contact";
-            this.contactDelete.UseVisualStyleBackColor = true;
+            this.contactDelete.UseVisualStyleBackColor = false;
             this.contactDelete.Click += new System.EventHandler(this.contactDelete_Click);
             // 
             // contactsClear
             // 
+            this.contactsClear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(219)))), ((int)(((byte)(124)))));
+            this.contactsClear.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(176)))), ((int)(((byte)(100)))));
+            this.contactsClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.contactsClear.Font = new System.Drawing.Font("Myanmar Text", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.contactsClear.Location = new System.Drawing.Point(171, 404);
+            this.contactsClear.Location = new System.Drawing.Point(175, 404);
             this.contactsClear.Name = "contactsClear";
             this.contactsClear.Size = new System.Drawing.Size(113, 23);
             this.contactsClear.TabIndex = 7;
             this.contactsClear.Text = "Clear Contacts File";
-            this.contactsClear.UseVisualStyleBackColor = true;
+            this.contactsClear.UseVisualStyleBackColor = false;
             this.contactsClear.Click += new System.EventHandler(this.contactsClear_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(301, 450);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(224)))), ((int)(((byte)(124)))));
+            this.ClientSize = new System.Drawing.Size(299, 433);
             this.Controls.Add(this.contactsClear);
             this.Controls.Add(this.contactDelete);
             this.Controls.Add(this.contactEdit);
             this.Controls.Add(this.contactsLoad);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.contactNew);
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Name = "Form1";
             this.Text = "Contact Storage";
             this.ResumeLayout(false);
