@@ -44,7 +44,6 @@ namespace _03DTP_Contacts_List
             // 
             this.contactNew.BackColor = System.Drawing.SystemColors.Control;
             this.contactNew.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDark;
-            this.contactNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.contactNew.Font = new System.Drawing.Font("Myanmar Text", 11F);
             this.contactNew.Location = new System.Drawing.Point(12, 12);
             this.contactNew.Name = "contactNew";
@@ -92,7 +91,6 @@ namespace _03DTP_Contacts_List
             // 
             this.contactsLoad.BackColor = System.Drawing.SystemColors.Control;
             this.contactsLoad.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDark;
-            this.contactsLoad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.contactsLoad.Font = new System.Drawing.Font("Myanmar Text", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.contactsLoad.Location = new System.Drawing.Point(12, 404);
             this.contactsLoad.Name = "contactsLoad";
@@ -106,7 +104,6 @@ namespace _03DTP_Contacts_List
             // 
             this.contactEdit.BackColor = System.Drawing.SystemColors.Control;
             this.contactEdit.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDark;
-            this.contactEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.contactEdit.Font = new System.Drawing.Font("Myanmar Text", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.contactEdit.Location = new System.Drawing.Point(12, 339);
             this.contactEdit.Name = "contactEdit";
@@ -120,7 +117,6 @@ namespace _03DTP_Contacts_List
             // 
             this.contactDelete.BackColor = System.Drawing.SystemColors.Control;
             this.contactDelete.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDark;
-            this.contactDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.contactDelete.Font = new System.Drawing.Font("Myanmar Text", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.contactDelete.Location = new System.Drawing.Point(186, 339);
             this.contactDelete.Name = "contactDelete";
@@ -134,7 +130,6 @@ namespace _03DTP_Contacts_List
             // 
             this.contactsClear.BackColor = System.Drawing.SystemColors.Control;
             this.contactsClear.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDark;
-            this.contactsClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.contactsClear.Font = new System.Drawing.Font("Myanmar Text", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.contactsClear.Location = new System.Drawing.Point(175, 404);
             this.contactsClear.Name = "contactsClear";

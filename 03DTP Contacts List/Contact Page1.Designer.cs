@@ -46,22 +46,24 @@ namespace _03DTP_Contacts_List
             // 
             // btnName
             // 
+            this.btnName.BackColor = System.Drawing.SystemColors.Control;
             this.btnName.Location = new System.Drawing.Point(15, 96);
             this.btnName.Name = "btnName";
             this.btnName.Size = new System.Drawing.Size(75, 23);
             this.btnName.TabIndex = 1;
             this.btnName.Text = "Edit Name";
-            this.btnName.UseVisualStyleBackColor = true;
+            this.btnName.UseVisualStyleBackColor = false;
             this.btnName.Click += new System.EventHandler(this.btnName_Click);
             // 
             // btnNumber
             // 
+            this.btnNumber.BackColor = System.Drawing.SystemColors.Control;
             this.btnNumber.Location = new System.Drawing.Point(15, 157);
             this.btnNumber.Name = "btnNumber";
             this.btnNumber.Size = new System.Drawing.Size(75, 23);
             this.btnNumber.TabIndex = 4;
             this.btnNumber.Text = "Edit Number";
-            this.btnNumber.UseVisualStyleBackColor = true;
+            this.btnNumber.UseVisualStyleBackColor = false;
             this.btnNumber.Click += new System.EventHandler(this.btnNumber_Click);
             // 
             // editName
@@ -74,12 +76,13 @@ namespace _03DTP_Contacts_List
             // 
             // okName
             // 
+            this.okName.BackColor = System.Drawing.SystemColors.Control;
             this.okName.Location = new System.Drawing.Point(165, 121);
             this.okName.Name = "okName";
             this.okName.Size = new System.Drawing.Size(75, 20);
             this.okName.TabIndex = 3;
             this.okName.Text = "OK";
-            this.okName.UseVisualStyleBackColor = true;
+            this.okName.UseVisualStyleBackColor = false;
             this.okName.Click += new System.EventHandler(this.okName_Click);
             // 
             // displayName
@@ -104,12 +107,13 @@ namespace _03DTP_Contacts_List
             // 
             // okNumber
             // 
+            this.okNumber.BackColor = System.Drawing.SystemColors.Control;
             this.okNumber.Location = new System.Drawing.Point(165, 182);
             this.okNumber.Name = "okNumber";
             this.okNumber.Size = new System.Drawing.Size(75, 20);
             this.okNumber.TabIndex = 6;
             this.okNumber.Text = "OK";
-            this.okNumber.UseVisualStyleBackColor = true;
+            this.okNumber.UseVisualStyleBackColor = false;
             this.okNumber.Click += new System.EventHandler(this.okNumber_Click);
             // 
             // editNumber
@@ -122,12 +126,13 @@ namespace _03DTP_Contacts_List
             // 
             // okAge
             // 
+            this.okAge.BackColor = System.Drawing.SystemColors.Control;
             this.okAge.Location = new System.Drawing.Point(165, 251);
             this.okAge.Name = "okAge";
             this.okAge.Size = new System.Drawing.Size(75, 20);
             this.okAge.TabIndex = 9;
             this.okAge.Text = "OK";
-            this.okAge.UseVisualStyleBackColor = true;
+            this.okAge.UseVisualStyleBackColor = false;
             this.okAge.Click += new System.EventHandler(this.okAge_Click);
             // 
             // editAge
@@ -140,12 +145,13 @@ namespace _03DTP_Contacts_List
             // 
             // btnAge
             // 
+            this.btnAge.BackColor = System.Drawing.SystemColors.Control;
             this.btnAge.Location = new System.Drawing.Point(15, 226);
             this.btnAge.Name = "btnAge";
             this.btnAge.Size = new System.Drawing.Size(75, 23);
             this.btnAge.TabIndex = 7;
             this.btnAge.Text = "Edit Age";
-            this.btnAge.UseVisualStyleBackColor = true;
+            this.btnAge.UseVisualStyleBackColor = false;
             this.btnAge.Click += new System.EventHandler(this.btnAge_Click);
             // 
             // displayAge
@@ -160,13 +166,14 @@ namespace _03DTP_Contacts_List
             // 
             // okAdd
             // 
+            this.okAdd.BackColor = System.Drawing.SystemColors.Control;
             this.okAdd.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.okAdd.Location = new System.Drawing.Point(15, 301);
             this.okAdd.Name = "okAdd";
             this.okAdd.Size = new System.Drawing.Size(225, 32);
             this.okAdd.TabIndex = 10;
             this.okAdd.Text = "Create New Contact";
-            this.okAdd.UseVisualStyleBackColor = true;
+            this.okAdd.UseVisualStyleBackColor = false;
             this.okAdd.Click += new System.EventHandler(this.okAdd_Click);
             // 
             // Contact_Page1
