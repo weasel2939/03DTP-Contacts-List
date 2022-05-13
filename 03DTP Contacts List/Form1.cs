@@ -77,7 +77,12 @@ namespace _03DTP_Contacts_List
             global.lines = File.ReadAllLines(filePath);
             global.contactCount = global.lines.Count();
             global.num = global.contactCount;
+
+            // Disables the user's Edit & Delete buttons.
+            contactEdit.Enabled = false;
+            contactDelete.Enabled = false;
         }
+
         // Creates new Contact_Page1 and pauses Form1.
         private void contactNew_Click_1(object sender, EventArgs e)
         {
@@ -122,15 +127,14 @@ namespace _03DTP_Contacts_List
         {
             // Creates new form based on Contact_Edit.
             // Selects and assigns the correct value for each contact.
-            Form contactEdit = new Contact_Edit();
+            Form contactEditform = new Contact_Edit();
             int editNumber = selectedIndex + 1;
-            contactEdit.Text = ("Contact " + editNumber);
-            
-            // Pauses Form1 and initiates Contact_Edit.
-            contactEdit.ShowDialog();
+            contactEditform.Text = (edit_contactName);
 
-            // Disables the user's Edit button
-            contactEdit.Enabled = false;
+            // Pauses Form1 and initiates Contact_Edit.
+            contactEditform.ShowDialog();
+
+            LoadContacts();
 
             if (editConfirm)
             {
