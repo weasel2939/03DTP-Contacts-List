@@ -25,7 +25,7 @@ namespace _03DTP_Contacts_List
 
         public static int selectedIndex = 0;
 
-        string filePath = @"C:\\contactStorage.txt";
+        string filePath = @"contactStorage.txt";
 
 
         // For counting purposes, might have to remove.
