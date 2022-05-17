@@ -47,6 +47,7 @@ namespace _03DTP_Contacts_List
             // btnName
             // 
             this.btnName.BackColor = System.Drawing.SystemColors.Control;
+            this.btnName.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDark;
             this.btnName.Location = new System.Drawing.Point(15, 96);
             this.btnName.Name = "btnName";
             this.btnName.Size = new System.Drawing.Size(75, 23);
@@ -58,6 +59,7 @@ namespace _03DTP_Contacts_List
             // btnNumber
             // 
             this.btnNumber.BackColor = System.Drawing.SystemColors.Control;
+            this.btnNumber.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDark;
             this.btnNumber.Location = new System.Drawing.Point(15, 157);
             this.btnNumber.Name = "btnNumber";
             this.btnNumber.Size = new System.Drawing.Size(75, 23);
@@ -77,6 +79,7 @@ namespace _03DTP_Contacts_List
             // okName
             // 
             this.okName.BackColor = System.Drawing.SystemColors.Control;
+            this.okName.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDark;
             this.okName.Location = new System.Drawing.Point(165, 121);
             this.okName.Name = "okName";
             this.okName.Size = new System.Drawing.Size(75, 20);
@@ -88,26 +91,27 @@ namespace _03DTP_Contacts_List
             // displayName
             // 
             this.displayName.AutoSize = true;
-            this.displayName.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.displayName.Font = new System.Drawing.Font("Myanmar Text", 12F);
             this.displayName.Location = new System.Drawing.Point(15, 15);
             this.displayName.Name = "displayName";
-            this.displayName.Size = new System.Drawing.Size(99, 21);
+            this.displayName.Size = new System.Drawing.Size(102, 29);
             this.displayName.TabIndex = 4;
             this.displayName.Text = "New Contact";
             // 
             // displayNumber
             // 
             this.displayNumber.AutoSize = true;
-            this.displayNumber.Font = new System.Drawing.Font("Microsoft Tai Le", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.displayNumber.Font = new System.Drawing.Font("Myanmar Text", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.displayNumber.Location = new System.Drawing.Point(25, 42);
             this.displayNumber.Name = "displayNumber";
-            this.displayNumber.Size = new System.Drawing.Size(97, 16);
+            this.displayNumber.Size = new System.Drawing.Size(93, 20);
             this.displayNumber.TabIndex = 5;
             this.displayNumber.Text = "Contact Number";
             // 
             // okNumber
             // 
             this.okNumber.BackColor = System.Drawing.SystemColors.Control;
+            this.okNumber.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDark;
             this.okNumber.Location = new System.Drawing.Point(165, 182);
             this.okNumber.Name = "okNumber";
             this.okNumber.Size = new System.Drawing.Size(75, 20);
@@ -127,6 +131,7 @@ namespace _03DTP_Contacts_List
             // okAge
             // 
             this.okAge.BackColor = System.Drawing.SystemColors.Control;
+            this.okAge.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDark;
             this.okAge.Location = new System.Drawing.Point(165, 251);
             this.okAge.Name = "okAge";
             this.okAge.Size = new System.Drawing.Size(75, 20);
@@ -146,6 +151,7 @@ namespace _03DTP_Contacts_List
             // btnAge
             // 
             this.btnAge.BackColor = System.Drawing.SystemColors.Control;
+            this.btnAge.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDark;
             this.btnAge.Location = new System.Drawing.Point(15, 226);
             this.btnAge.Name = "btnAge";
             this.btnAge.Size = new System.Drawing.Size(75, 23);
@@ -157,16 +163,17 @@ namespace _03DTP_Contacts_List
             // displayAge
             // 
             this.displayAge.AutoSize = true;
-            this.displayAge.Font = new System.Drawing.Font("Microsoft Tai Le", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.displayAge.Font = new System.Drawing.Font("Myanmar Text", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.displayAge.Location = new System.Drawing.Point(27, 64);
             this.displayAge.Name = "displayAge";
-            this.displayAge.Size = new System.Drawing.Size(54, 16);
+            this.displayAge.Size = new System.Drawing.Size(52, 20);
             this.displayAge.TabIndex = 11;
             this.displayAge.Text = "Age: [ x ]";
             // 
             // okAdd
             // 
             this.okAdd.BackColor = System.Drawing.SystemColors.Control;
+            this.okAdd.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDark;
             this.okAdd.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.okAdd.Location = new System.Drawing.Point(15, 301);
             this.okAdd.Name = "okAdd";
@@ -180,6 +187,7 @@ namespace _03DTP_Contacts_List
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(254, 353);
             this.Controls.Add(this.okAdd);
             this.Controls.Add(this.displayAge);
