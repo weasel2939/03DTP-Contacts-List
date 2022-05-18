@@ -13,31 +13,31 @@ namespace _03DTP_Contacts_List
 {
     public partial class Form1 : Form
     {
+        // Values used to check confirmation on creation and editing of selected contacts
         public static bool editConfirm = false;
         public static bool createConfirm = false;
+        // Blanks values which allow contact creation to be dynamic and infinite
         public static string contactName = string.Empty;
-        public static string contactNum = "";
-        public static string contactAge = "";
-        // For editing
+        public static string contactNum = string.Empty;
+        public static string contactAge = string.Empty;
+        // Temporary values used to edit a selected contact
         public static string edit_contactName = string.Empty;
-        public static string edit_contactNum = "";
-        public static string edit_contactAge = "";
-
+        public static string edit_contactNum = string.Empty;
+        public static string edit_contactAge = string.Empty;
+        // Allows for a more controlled use of selectedIndex, removes chance of related errors
         public static int selectedIndex = 0;
-
+        // Location for contact storage
         string filePath = @"contactStorage.txt";
 
-
-        // For counting purposes, might have to remove.
+        // Allows for proper indexing of contacts, ensures the number of contacts is always available for referal
         public class global
         {
             public static string[] lines = { "placeholder" };
             public static int contactCount = lines.Count();
             public static int num = contactCount;
-
         }
         
-        // Ensures all buttons are working correctly.
+        // Ensures all buttons and features are working correctly.
         public Form1()
         {
             InitializeComponent();
@@ -48,14 +48,22 @@ namespace _03DTP_Contacts_List
 
         }
 
-        // writes to filepath
+        // Runs after createContact is closed, pulling information from Contact_Page1 into Form1.
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            LoadContacts();
+        }
+
+        // Takes recently aquired contact information and writes it into the filepath
         public void createContact()
         {
+            // Assigns values as items in listView1
             ListViewItem lvi = new ListViewItem(contactName);
             lvi.SubItems.Add(contactNum);
             lvi.SubItems.Add(contactAge.ToString());
             listView1.Items.Add(lvi);
 
+            // Writes values to filepath
             File.AppendAllText(filePath, $"{contactName},{contactNum},{contactAge.ToString()}\n");
         }
 
@@ -83,38 +91,32 @@ namespace _03DTP_Contacts_List
             contactDelete.Enabled = false;
         }
 
-        // Creates new Contact_Page1 and pauses Form1.
         private void contactNew_Click_1(object sender, EventArgs e)
         {
-            
+            // Ensures the title of the creation window is the correct index
             global.num++;
-
+            
+            // Creates a new copy of "Contact Page1"
             Form newContact = new Contact_Page1();
             newContact.Text = ("Contact " + global.num);
 
+            // Opens the new creation window and pauses the main form
             newContact.ShowDialog();
 
+            // Checks if the user clicked the "Create Contact" button in the creation form
             if (createConfirm)
             {
                 createContact();
                 createConfirm = false;
                 if (global.num > 1)
                 {
-                global.contactCount++;
+                    global.contactCount++;
                 }
             }
             else
             {
                 global.num--;
             }
-
-            
-        }
-
-        // Runs after createContact is closed, pulling information from Contact_Page1 into Form1.
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            LoadContacts();
         }
 
         // Mainly for debugging, will probably remove in later versions.
@@ -126,7 +128,6 @@ namespace _03DTP_Contacts_List
         private void contactEdit_Click(object sender, EventArgs e)
         {
             // Creates new form based on Contact_Edit.
-            // Selects and assigns the correct value for each contact.
             Form contactEditform = new Contact_Edit();
             int editNumber = selectedIndex + 1;
             contactEditform.Text = (edit_contactName);
@@ -134,25 +135,23 @@ namespace _03DTP_Contacts_List
             // Pauses Form1 and initiates Contact_Edit.
             contactEditform.ShowDialog();
 
-            LoadContacts();
-
+            // Checks if the user clicked the "Confirm Edits" button in the edit window
             if (editConfirm)
             {
-                // takes the new information and reinsert it into the list and filepath
+                // Takes the new information and reinserts it into the list and filepath
                 List<string> allLines = File.ReadAllLines(filePath).ToList();
 
                 allLines.RemoveAt(selectedIndex);
                 allLines.Insert(selectedIndex, $"{edit_contactName},{edit_contactNum},{edit_contactAge.ToString()}");
                 //
                 File.WriteAllLines(filePath, allLines);
+                // Clears the selected index to avoid program confusion, reloads the contact list
                 selectedIndex = 0;
                 LoadContacts();
-                //
             }
         }
 
-
-        // Allows for the contact to be edited/deleted.
+        // Allows for the selected contact to be edited/deleted.
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
             contactDelete.Enabled = true;
@@ -165,7 +164,7 @@ namespace _03DTP_Contacts_List
             edit_contactAge = listView1.FocusedItem.SubItems[2].Text;
         }
 
-        // Removes the contact from both contactStorage and listView1.
+        // Removes the selected contact from both contactStorage.txt and listView1.
         private void contactDelete_Click(object sender, EventArgs e)
         {
             int selectedIndex = listView1.FocusedItem.Index;
@@ -176,6 +175,7 @@ namespace _03DTP_Contacts_List
             File.WriteAllLines(filePath, allLines);
             LoadContacts();
 
+            // Redefines the amount of contacts to correct any title issues
             global.num--;
             global.contactCount--;
             contactDelete.Enabled = false;
