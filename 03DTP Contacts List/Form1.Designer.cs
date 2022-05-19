@@ -80,7 +80,7 @@ namespace _03DTP_Contacts_List
             // 
             this.contNum.Text = "Phone Number";
             this.contNum.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.contNum.Width = 120;
+            this.contNum.Width = 113;
             // 
             // contAge
             // 

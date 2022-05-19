@@ -58,7 +58,6 @@
     <Compile Include="Contact Page1.Designer.cs">
       <DependentUpon>Contact Page1.cs</DependentUpon>
     </Compile>
-    <Compile Include="FlexibleMessageBox.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

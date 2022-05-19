@@ -8,7 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Text.RegularExpressions;
 using System.IO;
-using JR.Utils.GUI.Forms;
 using System.Windows.Forms;
 
 
@@ -96,7 +95,6 @@ namespace _03DTP_Contacts_List
             {
                 editAge.Text = "";
                 this.ActiveControl = editAge;
-
             }
         }
 
@@ -115,8 +113,7 @@ namespace _03DTP_Contacts_List
             // Sends an error window to inform the user
             else
             {
-                FlexibleMessageBox.Show("Please input all required values.", "Invalid Inputs");
-                FlexibleMessageBox.FONT = (SystemFonts.CaptionFont);
+                MessageBox.Show("Please input all required values.", "INVALID INPUTS");
                 if (age == string.Empty)
                 {
                     editAge.Enabled = true;
@@ -125,12 +122,15 @@ namespace _03DTP_Contacts_List
                 if (number == string.Empty)
                 {
                     editNumber.Enabled = true;
+                    editAge.Enabled = false;
                     this.ActiveControl = editNumber;
                 }
                 
                 if (name == string.Empty)
                 {
                     editName.Enabled = true;
+                    editAge.Enabled = false;
+                    editNumber.Enabled = false;
                     this.ActiveControl = editName;
                 }
             }
