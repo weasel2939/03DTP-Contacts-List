@@ -58,13 +58,14 @@ namespace _03DTP_Contacts_List
         public void createContact()
         {
             // Assigns values as items in listView1
-            ListViewItem lvi = new ListViewItem(contactName);
+            ListViewItem lvi = new ListViewItem(string.Empty);
+            lvi.SubItems.Add(contactName);
             lvi.SubItems.Add(contactNum);
             lvi.SubItems.Add(contactAge.ToString());
             listView1.Items.Add(lvi);
 
             // Writes values to filepath
-            File.AppendAllText(filePath, $"{contactName},{contactNum},{contactAge.ToString()}\n");
+            File.AppendAllText(filePath, $"{string.Empty},{contactName},{contactNum},{contactAge.ToString()}\n");
         }
 
         // reads from filepath
@@ -79,6 +80,7 @@ namespace _03DTP_Contacts_List
                 ListViewItem lvi = new ListViewItem(sections[0]);
                 lvi.SubItems.Add(sections[1]);
                 lvi.SubItems.Add(sections[2]);
+                lvi.SubItems.Add(sections[3]);
                 listView1.Items.Add(lvi);
             }
 
@@ -142,7 +144,7 @@ namespace _03DTP_Contacts_List
                 List<string> allLines = File.ReadAllLines(filePath).ToList();
 
                 allLines.RemoveAt(selectedIndex);
-                allLines.Insert(selectedIndex, $"{edit_contactName},{edit_contactNum},{edit_contactAge.ToString()}");
+                allLines.Insert(selectedIndex, $"{string.Empty},{edit_contactName},{edit_contactNum},{edit_contactAge.ToString()}");
                 //
                 File.WriteAllLines(filePath, allLines);
                 // Clears the selected index to avoid program confusion, reloads the contact list
@@ -159,9 +161,9 @@ namespace _03DTP_Contacts_List
             // For editing.
             contactEdit.Enabled = true;
             selectedIndex = listView1.FocusedItem.Index;
-            edit_contactName = listView1.FocusedItem.SubItems[0].Text;
-            edit_contactNum = listView1.FocusedItem.SubItems[1].Text;
-            edit_contactAge = listView1.FocusedItem.SubItems[2].Text;
+            edit_contactName = listView1.FocusedItem.SubItems[1].Text;
+            edit_contactNum = listView1.FocusedItem.SubItems[2].Text;
+            edit_contactAge = listView1.FocusedItem.SubItems[3].Text;
         }
 
         // Removes the selected contact from both contactStorage.txt and listView1.
@@ -184,10 +186,19 @@ namespace _03DTP_Contacts_List
         // Clears all text from contactStorage.txt.
         private void contactsClear_Click(object sender, EventArgs e)
         {
-            listView1.Items.Clear();
-            File.WriteAllText(filePath, $"{string.Empty}");
-            global.num = 0;
-            global.contactCount = 0;
+            // Confirmation window
+            DialogResult clearContacts = MessageBox.Show(this, "Remove all contacts?", "Contact List Modification", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (clearContacts == DialogResult.OK)
+            {
+                listView1.Items.Clear();
+                File.WriteAllText(filePath, $"{string.Empty}");
+                global.num = 0;
+                global.contactCount = 0;
+            }
+            else if (clearContacts == DialogResult.Cancel)
+            {
+                // Does nothing, closes confirmation window
+            }
         }
     }
 }

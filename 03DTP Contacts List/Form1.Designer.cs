@@ -38,6 +38,7 @@ namespace _03DTP_Contacts_List
             this.contactEdit = new System.Windows.Forms.Button();
             this.contactDelete = new System.Windows.Forms.Button();
             this.contactsClear = new System.Windows.Forms.Button();
+            this.placeholder = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // contactNew
@@ -47,7 +48,7 @@ namespace _03DTP_Contacts_List
             this.contactNew.Font = new System.Drawing.Font("Myanmar Text", 11F);
             this.contactNew.Location = new System.Drawing.Point(12, 12);
             this.contactNew.Name = "contactNew";
-            this.contactNew.Size = new System.Drawing.Size(276, 28);
+            this.contactNew.Size = new System.Drawing.Size(381, 28);
             this.contactNew.TabIndex = 1;
             this.contactNew.Text = "New Contact";
             this.contactNew.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -57,6 +58,7 @@ namespace _03DTP_Contacts_List
             // listView1
             // 
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.placeholder,
             this.contName,
             this.contNum,
             this.contAge});
@@ -65,7 +67,7 @@ namespace _03DTP_Contacts_List
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(12, 46);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(276, 287);
+            this.listView1.Size = new System.Drawing.Size(381, 313);
             this.listView1.TabIndex = 3;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -73,19 +75,23 @@ namespace _03DTP_Contacts_List
             // 
             // contName
             // 
+            this.contName.DisplayIndex = 0;
             this.contName.Text = "Name";
-            this.contName.Width = 100;
+            this.contName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.contName.Width = 165;
             // 
             // contNum
             // 
+            this.contNum.DisplayIndex = 1;
             this.contNum.Text = "Phone Number";
             this.contNum.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.contNum.Width = 113;
+            this.contNum.Width = 159;
             // 
             // contAge
             // 
             this.contAge.Text = "Age";
             this.contAge.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.contAge.Width = 53;
             // 
             // contactsLoad
             // 
@@ -105,7 +111,7 @@ namespace _03DTP_Contacts_List
             this.contactEdit.BackColor = System.Drawing.SystemColors.Control;
             this.contactEdit.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDark;
             this.contactEdit.Font = new System.Drawing.Font("Myanmar Text", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.contactEdit.Location = new System.Drawing.Point(12, 339);
+            this.contactEdit.Location = new System.Drawing.Point(12, 365);
             this.contactEdit.Name = "contactEdit";
             this.contactEdit.Size = new System.Drawing.Size(102, 23);
             this.contactEdit.TabIndex = 5;
@@ -118,7 +124,7 @@ namespace _03DTP_Contacts_List
             this.contactDelete.BackColor = System.Drawing.SystemColors.Control;
             this.contactDelete.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDark;
             this.contactDelete.Font = new System.Drawing.Font("Myanmar Text", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.contactDelete.Location = new System.Drawing.Point(186, 339);
+            this.contactDelete.Location = new System.Drawing.Point(291, 365);
             this.contactDelete.Name = "contactDelete";
             this.contactDelete.Size = new System.Drawing.Size(102, 23);
             this.contactDelete.TabIndex = 6;
@@ -131,7 +137,7 @@ namespace _03DTP_Contacts_List
             this.contactsClear.BackColor = System.Drawing.SystemColors.Control;
             this.contactsClear.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDark;
             this.contactsClear.Font = new System.Drawing.Font("Myanmar Text", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.contactsClear.Location = new System.Drawing.Point(175, 404);
+            this.contactsClear.Location = new System.Drawing.Point(280, 404);
             this.contactsClear.Name = "contactsClear";
             this.contactsClear.Size = new System.Drawing.Size(113, 23);
             this.contactsClear.TabIndex = 7;
@@ -139,12 +145,16 @@ namespace _03DTP_Contacts_List
             this.contactsClear.UseVisualStyleBackColor = false;
             this.contactsClear.Click += new System.EventHandler(this.contactsClear_Click);
             // 
+            // placeholder
+            // 
+            this.placeholder.Width = 0;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(299, 433);
+            this.ClientSize = new System.Drawing.Size(405, 433);
             this.Controls.Add(this.contactsClear);
             this.Controls.Add(this.contactDelete);
             this.Controls.Add(this.contactEdit);
@@ -169,6 +179,7 @@ namespace _03DTP_Contacts_List
         private System.Windows.Forms.Button contactEdit;
         private System.Windows.Forms.Button contactDelete;
         private System.Windows.Forms.Button contactsClear;
+        private System.Windows.Forms.ColumnHeader placeholder;
     }
 }
 
