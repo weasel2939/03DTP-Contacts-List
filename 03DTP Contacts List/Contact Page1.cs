@@ -110,7 +110,7 @@ namespace _03DTP_Contacts_List
                 Form1.createConfirm = true;
                 this.Close();
             }
-            // Sends an error window to inform the user
+            // Sends an error window to inform the user of false inputs, engages edit boxes
             else
             {
                 MessageBox.Show("Please input all required values.", "INVALID INPUTS");

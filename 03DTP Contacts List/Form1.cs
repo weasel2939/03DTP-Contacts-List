@@ -186,18 +186,30 @@ namespace _03DTP_Contacts_List
         // Clears all text from contactStorage.txt.
         private void contactsClear_Click(object sender, EventArgs e)
         {
-            // Confirmation window
-            DialogResult clearContacts = MessageBox.Show(this, "Remove all contacts?", "Contact List Modification", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
-            if (clearContacts == DialogResult.OK)
+            LoadContacts();
+            // If contact list is already empty
+            if (global.lines.Count() == 0)
             {
-                listView1.Items.Clear();
-                File.WriteAllText(filePath, $"{string.Empty}");
-                global.num = 0;
-                global.contactCount = 0;
+                DialogResult clearingError = MessageBox.Show(this, "Contact list is already empty.", "Contact List Modification", 
+                    MessageBoxButtons.OK, MessageBoxIcon.Question);
             }
-            else if (clearContacts == DialogResult.Cancel)
+            // If contact list has values
+            else
             {
-                // Does nothing, closes confirmation window
+                // Confirmation window
+                DialogResult clearContacts = MessageBox.Show(this, "Remove all contacts?", "Contact List Modification", 
+                    MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                if (clearContacts == DialogResult.OK)
+                {
+                    listView1.Items.Clear();
+                    File.WriteAllText(filePath, $"{string.Empty}");
+                    global.num = 0;
+                    global.contactCount = 0;
+                }
+                else if (clearContacts == DialogResult.Cancel)
+                {
+                    // Does nothing, closes confirmation window
+                }
             }
         }
     }
