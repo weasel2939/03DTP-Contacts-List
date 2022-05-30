@@ -23,13 +23,17 @@ namespace _03DTP_Contacts_List
         public Contact_Edit()
         {
             InitializeComponent();
+            // Pulls information from Form1
             name = Form1.edit_contactName;
             number = Form1.edit_contactNum;
             age = Form1.edit_contactAge;
+
             // Displays information in the correct boxes
             displayName.Text = name;
             displayNumber.Text = number;
             displayAge.Text = ("Age: [ " + age + " ]");
+
+            // Ensures all values are set correctly
             editName.Text = name;
             editNumber.Text = number;
             editAge.Text = age;
@@ -40,7 +44,7 @@ namespace _03DTP_Contacts_List
         {
             editName.Enabled = true;
             this.ActiveControl = editName;
-            editName.Text = "";
+            editName.Text = string.Empty;
 
         }
 
@@ -57,7 +61,7 @@ namespace _03DTP_Contacts_List
         {
             editNumber.Enabled = true;
             this.ActiveControl = editNumber;
-            editNumber.Text = "";
+            editNumber.Text = string.Empty;
 
         }
 
@@ -66,14 +70,18 @@ namespace _03DTP_Contacts_List
         {
             // Ensures the contact number is inputted by the user in the correct format (numbers and spaces only)
             number = editNumber.Text;
+
+            // Secures newly entered value as the correct variable
             if (Regex.IsMatch(number, @"^[\d\s]+$"))
             {
                 displayNumber.Text = number;
                 editNumber.Enabled = false;
             }
+
+            // Resets the Number textbox for editing
             else
             {
-                editNumber.Text = "";
+                editNumber.Text = string.Empty;
                 this.ActiveControl = editNumber;
             }
         }
@@ -83,7 +91,7 @@ namespace _03DTP_Contacts_List
         {
             editAge.Enabled = true;
             this.ActiveControl = editAge;
-            editAge.Text = "";
+            editAge.Text = string.Empty;
         }
 
         // Readies the contact age to be passed into Form1
@@ -91,14 +99,18 @@ namespace _03DTP_Contacts_List
         {
             // Ensures the contact age is inputted by the user in the correct format (numbers only)
             age = editAge.Text;
+
+            // Secures newly entered value as the correct variable
             if (Regex.IsMatch(age, @"^[\d\s]+$"))
             {
                 displayAge.Text = ("Age: [ " + age + " ]");
                 editAge.Enabled = false;
             }
+
+            // Resets the Age textbox for editing
             else
             {
-                editAge.Text = "";
+                editAge.Text = string.Empty;
                 this.ActiveControl = editAge;
             }
         }
@@ -109,6 +121,8 @@ namespace _03DTP_Contacts_List
             Form1.edit_contactName = name;
             Form1.edit_contactNum = number;
             Form1.edit_contactAge = age;
+
+            // Resumes all Form1 processes
             Form1.editConfirm = true;
             this.Close();
         }

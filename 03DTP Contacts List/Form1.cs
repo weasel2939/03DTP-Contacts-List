@@ -65,9 +65,9 @@ namespace _03DTP_Contacts_List
             listView1.Items.Add(lvi);
 
             // Writes values to filepath
-            File.AppendAllText(filePath, $"{string.Empty},{contactName},{contactNum},{contactAge.ToString()}\n");
+            File.AppendAllText(filePath, $"{string.Empty}, {contactName}, {contactNum}, {contactAge.ToString()}\n");
         }
-
+         
         // reads from filepath
         public void LoadContacts()
         {
@@ -144,9 +144,10 @@ namespace _03DTP_Contacts_List
                 List<string> allLines = File.ReadAllLines(filePath).ToList();
 
                 allLines.RemoveAt(selectedIndex);
-                allLines.Insert(selectedIndex, $"{string.Empty},{edit_contactName},{edit_contactNum},{edit_contactAge.ToString()}");
-                //
+                allLines.Insert(selectedIndex, $"{string.Empty}, {edit_contactName}, {edit_contactNum}, {edit_contactAge.ToString()}");
+                
                 File.WriteAllLines(filePath, allLines);
+
                 // Clears the selected index to avoid program confusion, reloads the contact list
                 selectedIndex = 0;
                 LoadContacts();
@@ -158,7 +159,7 @@ namespace _03DTP_Contacts_List
         {
             contactDelete.Enabled = true;
 
-            // For editing.
+            // Readies temporary variables to be edited in Contact_Edit
             contactEdit.Enabled = true;
             selectedIndex = listView1.FocusedItem.Index;
             edit_contactName = listView1.FocusedItem.SubItems[1].Text;
@@ -177,7 +178,7 @@ namespace _03DTP_Contacts_List
             File.WriteAllLines(filePath, allLines);
             LoadContacts();
 
-            // Redefines the amount of contacts to correct any title issues
+            // Redefines the amount of contacts being stored to correct any title issues when creating/editing contacts
             global.num--;
             global.contactCount--;
             contactDelete.Enabled = false;
@@ -187,18 +188,22 @@ namespace _03DTP_Contacts_List
         private void contactsClear_Click(object sender, EventArgs e)
         {
             LoadContacts();
+
             // If contact list is already empty
             if (global.lines.Count() == 0)
             {
                 DialogResult clearingError = MessageBox.Show(this, "Contact list is already empty.", "Contact List Modification", 
                     MessageBoxButtons.OK, MessageBoxIcon.Question);
             }
+
             // If contact list has values
             else
             {
                 // Confirmation window
                 DialogResult clearContacts = MessageBox.Show(this, "Remove all contacts?", "Contact List Modification", 
                     MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                
+                // Clears all text from contactStorage.txt
                 if (clearContacts == DialogResult.OK)
                 {
                     listView1.Items.Clear();
