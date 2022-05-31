@@ -119,6 +119,10 @@ namespace _03DTP_Contacts_List
             {
                 global.num--;
             }
+
+            // Clears the selected index to avoid program confusion, reloads the contact list
+            selectedIndex = 0;
+            LoadContacts();
         }
 
         // Mainly for debugging, will probably remove in later versions.
