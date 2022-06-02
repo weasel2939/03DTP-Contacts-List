@@ -31,6 +31,7 @@ namespace _03DTP_Contacts_List
         {
             this.contactNew = new System.Windows.Forms.Button();
             this.listView1 = new System.Windows.Forms.ListView();
+            this.placeholder = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.contName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.contNum = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.contAge = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -38,7 +39,7 @@ namespace _03DTP_Contacts_List
             this.contactEdit = new System.Windows.Forms.Button();
             this.contactDelete = new System.Windows.Forms.Button();
             this.contactsClear = new System.Windows.Forms.Button();
-            this.placeholder = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.contactDisplay = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // contactNew
@@ -73,25 +74,28 @@ namespace _03DTP_Contacts_List
             this.listView1.View = System.Windows.Forms.View.Details;
             this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             // 
+            // placeholder
+            // 
+            this.placeholder.Text = "#";
+            this.placeholder.Width = 19;
+            // 
             // contName
             // 
-            this.contName.DisplayIndex = 0;
             this.contName.Text = "Name";
             this.contName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.contName.Width = 165;
             // 
             // contNum
             // 
-            this.contNum.DisplayIndex = 1;
             this.contNum.Text = "Phone Number";
             this.contNum.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.contNum.Width = 159;
+            this.contNum.Width = 146;
             // 
             // contAge
             // 
             this.contAge.Text = "Age";
             this.contAge.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.contAge.Width = 53;
+            this.contAge.Width = 46;
             // 
             // contactsLoad
             // 
@@ -145,9 +149,15 @@ namespace _03DTP_Contacts_List
             this.contactsClear.UseVisualStyleBackColor = false;
             this.contactsClear.Click += new System.EventHandler(this.contactsClear_Click);
             // 
-            // placeholder
+            // contactDisplay
             // 
-            this.placeholder.Width = 0;
+            this.contactDisplay.Location = new System.Drawing.Point(120, 366);
+            this.contactDisplay.Name = "contactDisplay";
+            this.contactDisplay.ReadOnly = true;
+            this.contactDisplay.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.contactDisplay.Size = new System.Drawing.Size(165, 20);
+            this.contactDisplay.TabIndex = 8;
+            this.contactDisplay.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // Form1
             // 
@@ -155,6 +165,7 @@ namespace _03DTP_Contacts_List
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(405, 433);
+            this.Controls.Add(this.contactDisplay);
             this.Controls.Add(this.contactsClear);
             this.Controls.Add(this.contactDelete);
             this.Controls.Add(this.contactEdit);
@@ -165,6 +176,7 @@ namespace _03DTP_Contacts_List
             this.Name = "Form1";
             this.Text = "Contact Storage";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -180,6 +192,7 @@ namespace _03DTP_Contacts_List
         private System.Windows.Forms.Button contactDelete;
         private System.Windows.Forms.Button contactsClear;
         private System.Windows.Forms.ColumnHeader placeholder;
+        private System.Windows.Forms.TextBox contactDisplay;
     }
 }
 

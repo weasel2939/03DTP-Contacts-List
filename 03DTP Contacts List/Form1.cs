@@ -52,6 +52,7 @@ namespace _03DTP_Contacts_List
         private void Form1_Load(object sender, EventArgs e)
         {
             LoadContacts();
+
         }
 
         // Takes recently aquired contact information and writes it into the filepath
@@ -65,7 +66,7 @@ namespace _03DTP_Contacts_List
             listView1.Items.Add(lvi);
 
             // Writes values to filepath
-            File.AppendAllText(filePath, $"{string.Empty}, {contactName}, {contactNum}, {contactAge.ToString()}\n");
+            File.AppendAllText(filePath, $"{global.num}, {contactName}, {contactNum}, {contactAge.ToString()}\n");
         }
          
         // reads from filepath
@@ -169,6 +170,7 @@ namespace _03DTP_Contacts_List
             edit_contactName = listView1.FocusedItem.SubItems[1].Text;
             edit_contactNum = listView1.FocusedItem.SubItems[2].Text;
             edit_contactAge = listView1.FocusedItem.SubItems[3].Text;
+            contactDisplay.Text = edit_contactName;
         }
 
         // Removes the selected contact from both contactStorage.txt and listView1.
