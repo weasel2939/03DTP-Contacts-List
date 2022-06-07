@@ -64,6 +64,7 @@ namespace _03DTP_Contacts_List
             this.contNum,
             this.contAge});
             this.listView1.Font = new System.Drawing.Font("Myanmar Text", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listView1.FullRowSelect = true;
             this.listView1.GridLines = true;
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(12, 46);
@@ -76,26 +77,26 @@ namespace _03DTP_Contacts_List
             // 
             // placeholder
             // 
-            this.placeholder.Text = "#";
-            this.placeholder.Width = 19;
+            this.placeholder.Text = "";
+            this.placeholder.Width = 0;
             // 
             // contName
             // 
             this.contName.Text = "Name";
             this.contName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.contName.Width = 165;
+            this.contName.Width = 183;
             // 
             // contNum
             // 
             this.contNum.Text = "Phone Number";
             this.contNum.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.contNum.Width = 146;
+            this.contNum.Width = 138;
             // 
             // contAge
             // 
             this.contAge.Text = "Age";
             this.contAge.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.contAge.Width = 46;
+            this.contAge.Width = 56;
             // 
             // contactsLoad
             // 

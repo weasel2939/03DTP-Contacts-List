@@ -66,7 +66,7 @@ namespace _03DTP_Contacts_List
             listView1.Items.Add(lvi);
 
             // Writes values to filepath
-            File.AppendAllText(filePath, $"{global.num}, {contactName}, {contactNum}, {contactAge.ToString()}\n");
+            File.AppendAllText(filePath, $"{string.Empty}, {contactName}, {contactNum}, {contactAge.ToString()}\n");
         }
          
         // reads from filepath
