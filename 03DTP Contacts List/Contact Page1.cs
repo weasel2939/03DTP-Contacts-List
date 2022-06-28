@@ -27,6 +27,9 @@ namespace _03DTP_Contacts_List
             editName.Enabled = false;
             editNumber.Enabled = false;
             editAge.Enabled = false;
+            name = string.Empty;
+            number = string.Empty;
+            age = string.Empty;
         }
 
         // Enables the Name textbox for user input
@@ -35,7 +38,6 @@ namespace _03DTP_Contacts_List
             editName.Enabled = true;
             this.ActiveControl = editName;
             editName.Text = string.Empty;
-
         }
 
         // Readies the contact name to be passed into Form1 

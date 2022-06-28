@@ -66,7 +66,7 @@ namespace _03DTP_Contacts_List
             listView1.Items.Add(lvi);
 
             // Writes values to filepath
-            File.AppendAllText(filePath, $"{string.Empty}, {contactName}, {contactNum}, {contactAge.ToString()}\n");
+            File.AppendAllText(filePath, $"{string.Empty},{contactName},{contactNum},{contactAge.ToString()}\n");
         }
          
         // reads from filepath
@@ -149,7 +149,7 @@ namespace _03DTP_Contacts_List
                 List<string> allLines = File.ReadAllLines(filePath).ToList();
 
                 allLines.RemoveAt(selectedIndex);
-                allLines.Insert(selectedIndex, $"{string.Empty}, {edit_contactName}, {edit_contactNum}, {edit_contactAge.ToString()}");
+                allLines.Insert(selectedIndex, $"{string.Empty},{edit_contactName},{edit_contactNum},{edit_contactAge.ToString()}");
                 
                 File.WriteAllLines(filePath, allLines);
 
