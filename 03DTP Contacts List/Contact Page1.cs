@@ -20,40 +20,28 @@ namespace _03DTP_Contacts_List
         public static string number = string.Empty;
         public static string age = string.Empty;
 
-        // Ensures all buttons and features are working correctly.
+        // Ensures all buttons and features are working correctly
         public Contact_Page1()
         {
             InitializeComponent();
-            editName.Enabled = false;
-            editNumber.Enabled = false;
-            editAge.Enabled = false;
+
+            // Hides warning labels
+            warnNumber.Text = string.Empty;
+            warnAge.Text = string.Empty;
+
+            // Resets contact values
             name = string.Empty;
             number = string.Empty;
             age = string.Empty;
         }
 
-        // Enables the Name textbox for user input
-        private void btnName_Click(object sender, EventArgs e)
-        {
-            editName.Enabled = true;
-            this.ActiveControl = editName;
-            editName.Text = string.Empty;
-        }
-
         // Readies the contact name to be passed into Form1 
         private void okName_Click(object sender, EventArgs e)
         {
-            editName.Enabled = false;
             name = editName.Text;
             displayName.Text = name;
-        }
-
-        // Enables the Number textbox for user input
-        private void btnNumber_Click(object sender, EventArgs e)
-        {
-            editNumber.Enabled = true;
+            editName.Text = string.Empty;
             this.ActiveControl = editNumber;
-            editNumber.Text = string.Empty;
 
         }
 
@@ -68,6 +56,8 @@ namespace _03DTP_Contacts_List
             {
                 displayNumber.Text = number;
                 editNumber.Enabled = false;
+                this.ActiveControl = editAge;
+
             }
 
             // Resets the Number textbox for editing
@@ -75,15 +65,8 @@ namespace _03DTP_Contacts_List
             {
                 editNumber.Text = string.Empty;
                 this.ActiveControl = editNumber;
+                warnNumber.Text = "Invalid Entries";
             }
-        }
-
-        // Enables the Age textbox for user input
-        private void btnAge_Click(object sender, EventArgs e)
-        {
-            editAge.Enabled = true;
-            this.ActiveControl = editAge;
-            editAge.Text = string.Empty;
         }
 
         // Readies the contact age to be passed into Form1
@@ -97,6 +80,8 @@ namespace _03DTP_Contacts_List
             {
                 displayAge.Text = ("Age: [ " + age + " ]");
                 editAge.Enabled = false;
+                this.ActiveControl = okAdd;
+
             }
 
             // Resets the Age textbox for editing
@@ -104,6 +89,8 @@ namespace _03DTP_Contacts_List
             {
                 editAge.Text = string.Empty;
                 this.ActiveControl = editAge;
+                warnAge.Text = "Invalid Entries";
+
             }
         }
 

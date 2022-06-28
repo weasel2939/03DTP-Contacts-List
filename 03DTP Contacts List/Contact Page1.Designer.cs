@@ -29,8 +29,6 @@ namespace _03DTP_Contacts_List
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnName = new System.Windows.Forms.Button();
-            this.btnNumber = new System.Windows.Forms.Button();
             this.editName = new System.Windows.Forms.TextBox();
             this.okName = new System.Windows.Forms.Button();
             this.displayName = new System.Windows.Forms.Label();
@@ -39,39 +37,18 @@ namespace _03DTP_Contacts_List
             this.editNumber = new System.Windows.Forms.TextBox();
             this.okAge = new System.Windows.Forms.Button();
             this.editAge = new System.Windows.Forms.TextBox();
-            this.btnAge = new System.Windows.Forms.Button();
             this.displayAge = new System.Windows.Forms.Label();
             this.okAdd = new System.Windows.Forms.Button();
+            this.warnNumber = new System.Windows.Forms.Label();
+            this.warnAge = new System.Windows.Forms.Label();
+            this.labelNum = new System.Windows.Forms.Label();
+            this.labelAge = new System.Windows.Forms.Label();
+            this.labelName = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            // 
-            // btnName
-            // 
-            this.btnName.BackColor = System.Drawing.SystemColors.Control;
-            this.btnName.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDark;
-            this.btnName.Location = new System.Drawing.Point(15, 96);
-            this.btnName.Name = "btnName";
-            this.btnName.Size = new System.Drawing.Size(75, 23);
-            this.btnName.TabIndex = 1;
-            this.btnName.Text = "Edit Name";
-            this.btnName.UseVisualStyleBackColor = false;
-            this.btnName.Click += new System.EventHandler(this.btnName_Click);
-            // 
-            // btnNumber
-            // 
-            this.btnNumber.BackColor = System.Drawing.SystemColors.Control;
-            this.btnNumber.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDark;
-            this.btnNumber.Location = new System.Drawing.Point(15, 157);
-            this.btnNumber.Name = "btnNumber";
-            this.btnNumber.Size = new System.Drawing.Size(75, 23);
-            this.btnNumber.TabIndex = 4;
-            this.btnNumber.Text = "Edit Number";
-            this.btnNumber.UseVisualStyleBackColor = false;
-            this.btnNumber.Click += new System.EventHandler(this.btnNumber_Click);
             // 
             // editName
             // 
-            this.editName.Enabled = false;
-            this.editName.Location = new System.Drawing.Point(15, 121);
+            this.editName.Location = new System.Drawing.Point(15, 113);
             this.editName.Name = "editName";
             this.editName.Size = new System.Drawing.Size(122, 20);
             this.editName.TabIndex = 2;
@@ -80,7 +57,7 @@ namespace _03DTP_Contacts_List
             // 
             this.okName.BackColor = System.Drawing.SystemColors.Control;
             this.okName.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDark;
-            this.okName.Location = new System.Drawing.Point(165, 121);
+            this.okName.Location = new System.Drawing.Point(165, 113);
             this.okName.Name = "okName";
             this.okName.Size = new System.Drawing.Size(75, 20);
             this.okName.TabIndex = 3;
@@ -112,7 +89,7 @@ namespace _03DTP_Contacts_List
             // 
             this.okNumber.BackColor = System.Drawing.SystemColors.Control;
             this.okNumber.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDark;
-            this.okNumber.Location = new System.Drawing.Point(165, 182);
+            this.okNumber.Location = new System.Drawing.Point(165, 166);
             this.okNumber.Name = "okNumber";
             this.okNumber.Size = new System.Drawing.Size(75, 20);
             this.okNumber.TabIndex = 6;
@@ -122,8 +99,7 @@ namespace _03DTP_Contacts_List
             // 
             // editNumber
             // 
-            this.editNumber.Enabled = false;
-            this.editNumber.Location = new System.Drawing.Point(15, 182);
+            this.editNumber.Location = new System.Drawing.Point(15, 166);
             this.editNumber.Name = "editNumber";
             this.editNumber.Size = new System.Drawing.Size(122, 20);
             this.editNumber.TabIndex = 5;
@@ -132,7 +108,7 @@ namespace _03DTP_Contacts_List
             // 
             this.okAge.BackColor = System.Drawing.SystemColors.Control;
             this.okAge.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDark;
-            this.okAge.Location = new System.Drawing.Point(165, 251);
+            this.okAge.Location = new System.Drawing.Point(165, 234);
             this.okAge.Name = "okAge";
             this.okAge.Size = new System.Drawing.Size(75, 20);
             this.okAge.TabIndex = 9;
@@ -142,23 +118,10 @@ namespace _03DTP_Contacts_List
             // 
             // editAge
             // 
-            this.editAge.Enabled = false;
-            this.editAge.Location = new System.Drawing.Point(15, 251);
+            this.editAge.Location = new System.Drawing.Point(15, 234);
             this.editAge.Name = "editAge";
             this.editAge.Size = new System.Drawing.Size(122, 20);
             this.editAge.TabIndex = 8;
-            // 
-            // btnAge
-            // 
-            this.btnAge.BackColor = System.Drawing.SystemColors.Control;
-            this.btnAge.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDark;
-            this.btnAge.Location = new System.Drawing.Point(15, 226);
-            this.btnAge.Name = "btnAge";
-            this.btnAge.Size = new System.Drawing.Size(75, 23);
-            this.btnAge.TabIndex = 7;
-            this.btnAge.Text = "Edit Age";
-            this.btnAge.UseVisualStyleBackColor = false;
-            this.btnAge.Click += new System.EventHandler(this.btnAge_Click);
             // 
             // displayAge
             // 
@@ -175,7 +138,7 @@ namespace _03DTP_Contacts_List
             this.okAdd.BackColor = System.Drawing.SystemColors.Control;
             this.okAdd.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDark;
             this.okAdd.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.okAdd.Location = new System.Drawing.Point(15, 301);
+            this.okAdd.Location = new System.Drawing.Point(15, 289);
             this.okAdd.Name = "okAdd";
             this.okAdd.Size = new System.Drawing.Size(225, 32);
             this.okAdd.TabIndex = 10;
@@ -183,25 +146,88 @@ namespace _03DTP_Contacts_List
             this.okAdd.UseVisualStyleBackColor = false;
             this.okAdd.Click += new System.EventHandler(this.okAdd_Click);
             // 
+            // warnNumber
+            // 
+            this.warnNumber.AutoSize = true;
+            this.warnNumber.Font = new System.Drawing.Font("Myanmar Text", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.warnNumber.ForeColor = System.Drawing.Color.DarkRed;
+            this.warnNumber.Location = new System.Drawing.Point(16, 187);
+            this.warnNumber.Name = "warnNumber";
+            this.warnNumber.Size = new System.Drawing.Size(84, 20);
+            this.warnNumber.TabIndex = 12;
+            this.warnNumber.Text = "Warning Label";
+            // 
+            // warnAge
+            // 
+            this.warnAge.AutoSize = true;
+            this.warnAge.Font = new System.Drawing.Font("Myanmar Text", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.warnAge.ForeColor = System.Drawing.Color.DarkRed;
+            this.warnAge.Location = new System.Drawing.Point(16, 257);
+            this.warnAge.Name = "warnAge";
+            this.warnAge.Size = new System.Drawing.Size(84, 20);
+            this.warnAge.TabIndex = 13;
+            this.warnAge.Text = "Warning Label";
+            // 
+            // labelNum
+            // 
+            this.labelNum.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.labelNum.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.labelNum.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.labelNum.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.labelNum.Location = new System.Drawing.Point(29, 143);
+            this.labelNum.Name = "labelNum";
+            this.labelNum.Size = new System.Drawing.Size(86, 20);
+            this.labelNum.TabIndex = 15;
+            this.labelNum.Text = "Edit Number";
+            this.labelNum.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // labelAge
+            // 
+            this.labelAge.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.labelAge.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.labelAge.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.labelAge.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.labelAge.Location = new System.Drawing.Point(31, 211);
+            this.labelAge.Name = "labelAge";
+            this.labelAge.Size = new System.Drawing.Size(69, 20);
+            this.labelAge.TabIndex = 16;
+            this.labelAge.Text = "Edit Age";
+            this.labelAge.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // labelName
+            // 
+            this.labelName.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.labelName.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.labelName.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.labelName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.labelName.Location = new System.Drawing.Point(31, 90);
+            this.labelName.Name = "labelName";
+            this.labelName.Size = new System.Drawing.Size(69, 20);
+            this.labelName.TabIndex = 17;
+            this.labelName.Text = "Edit Name";
+            this.labelName.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
             // Contact_Page1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(254, 353);
+            this.ClientSize = new System.Drawing.Size(254, 332);
+            this.Controls.Add(this.labelName);
+            this.Controls.Add(this.labelAge);
+            this.Controls.Add(this.labelNum);
+            this.Controls.Add(this.warnAge);
+            this.Controls.Add(this.warnNumber);
             this.Controls.Add(this.okAdd);
             this.Controls.Add(this.displayAge);
             this.Controls.Add(this.okAge);
             this.Controls.Add(this.editAge);
-            this.Controls.Add(this.btnAge);
             this.Controls.Add(this.okNumber);
             this.Controls.Add(this.editNumber);
             this.Controls.Add(this.displayNumber);
             this.Controls.Add(this.displayName);
             this.Controls.Add(this.okName);
             this.Controls.Add(this.editName);
-            this.Controls.Add(this.btnNumber);
-            this.Controls.Add(this.btnName);
             this.Name = "Contact_Page1";
             this.Text = "Contact_Page1";
             this.ResumeLayout(false);
@@ -210,9 +236,6 @@ namespace _03DTP_Contacts_List
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnName;
-        private System.Windows.Forms.Button btnNumber;
         private System.Windows.Forms.TextBox editName;
         private System.Windows.Forms.Button okName;
         private System.Windows.Forms.Label displayName;
@@ -221,9 +244,13 @@ namespace _03DTP_Contacts_List
         private System.Windows.Forms.TextBox editNumber;
         private System.Windows.Forms.Button okAge;
         private System.Windows.Forms.TextBox editAge;
-        private System.Windows.Forms.Button btnAge;
         private System.Windows.Forms.Label displayAge;
         private System.Windows.Forms.Button okAdd;
+        private System.Windows.Forms.Label warnNumber;
+        private System.Windows.Forms.Label warnAge;
+        private System.Windows.Forms.Label labelNum;
+        private System.Windows.Forms.Label labelAge;
+        private System.Windows.Forms.Label labelName;
     }
 }
 
