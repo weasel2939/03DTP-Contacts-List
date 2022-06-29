@@ -170,7 +170,14 @@ namespace _03DTP_Contacts_List
             edit_contactName = listView1.FocusedItem.SubItems[1].Text;
             edit_contactNum = listView1.FocusedItem.SubItems[2].Text;
             edit_contactAge = listView1.FocusedItem.SubItems[3].Text;
-            contactDisplay.Text = edit_contactName;
+            if ((selectedIndex + 1) < 10)
+            {
+                contactDisplay.Text = (edit_contactName + " " + "[0" + (selectedIndex + 1) + "]");
+            }
+            else
+            {
+                contactDisplay.Text = (edit_contactName + " " + "[" + (selectedIndex + 1) + "]");
+            }
         }
 
         // Removes the selected contact from both contactStorage.txt and listView1.

@@ -40,7 +40,6 @@ namespace _03DTP_Contacts_List
         {
             name = editName.Text;
             displayName.Text = name;
-            editName.Text = string.Empty;
             this.ActiveControl = editNumber;
 
         }
@@ -55,9 +54,8 @@ namespace _03DTP_Contacts_List
             if (Regex.IsMatch(number, @"^[\d\s]+$"))
             {
                 displayNumber.Text = number;
-                editNumber.Enabled = false;
                 this.ActiveControl = editAge;
-
+                warnNumber.Text = string.Empty;
             }
 
             // Resets the Number textbox for editing
@@ -79,9 +77,8 @@ namespace _03DTP_Contacts_List
             if (Regex.IsMatch(age, @"^[\d\s]+$"))
             {
                 displayAge.Text = ("Age: [ " + age + " ]");
-                editAge.Enabled = false;
                 this.ActiveControl = okAdd;
-
+                warnAge.Text = string.Empty;
             }
 
             // Resets the Age textbox for editing
@@ -116,24 +113,18 @@ namespace _03DTP_Contacts_List
                 // Checks Age status
                 if (age == string.Empty)
                 {
-                    editAge.Enabled = true;
                     this.ActiveControl = editAge;
                 }
 
                 // Checks Number status
                 if (number == string.Empty)
                 {
-                    editNumber.Enabled = true;
-                    editAge.Enabled = false;
                     this.ActiveControl = editNumber;
                 }
                 
                 // Checks Name status
                 if (name == string.Empty)
                 {
-                    editName.Enabled = true;
-                    editAge.Enabled = false;
-                    editNumber.Enabled = false;
                     this.ActiveControl = editName;
                 }
             }

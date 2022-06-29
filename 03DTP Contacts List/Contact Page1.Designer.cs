@@ -151,7 +151,7 @@ namespace _03DTP_Contacts_List
             this.warnNumber.AutoSize = true;
             this.warnNumber.Font = new System.Drawing.Font("Myanmar Text", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.warnNumber.ForeColor = System.Drawing.Color.DarkRed;
-            this.warnNumber.Location = new System.Drawing.Point(16, 187);
+            this.warnNumber.Location = new System.Drawing.Point(16, 189);
             this.warnNumber.Name = "warnNumber";
             this.warnNumber.Size = new System.Drawing.Size(84, 20);
             this.warnNumber.TabIndex = 12;
