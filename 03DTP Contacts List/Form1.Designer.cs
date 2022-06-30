@@ -107,7 +107,7 @@ namespace _03DTP_Contacts_List
             this.contactsLoad.Name = "contactsLoad";
             this.contactsLoad.Size = new System.Drawing.Size(113, 23);
             this.contactsLoad.TabIndex = 4;
-            this.contactsLoad.Text = "Load Contacts File";
+            this.contactsLoad.Text = "Reload Contacts";
             this.contactsLoad.UseVisualStyleBackColor = false;
             this.contactsLoad.Click += new System.EventHandler(this.contactsLoad_Click);
             // 

@@ -223,6 +223,8 @@ namespace _03DTP_Contacts_List
                     File.WriteAllText(filePath, $"{string.Empty}");
                     global.num = 0;
                     global.contactCount = 0;
+                    contactDisplay.Text = string.Empty;
+                    selectedIndex = 0;
                 }
                 else if (clearContacts == DialogResult.Cancel)
                 {
