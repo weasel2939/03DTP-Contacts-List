@@ -92,6 +92,10 @@ namespace _03DTP_Contacts_List
             // Disables the user's Edit & Delete buttons.
             contactEdit.Enabled = false;
             contactDelete.Enabled = false;
+
+            // Resets contact selection index
+            contactDisplay.Text = string.Empty;
+            selectedIndex = 0;
         }
 
         private void contactNew_Click_1(object sender, EventArgs e)
