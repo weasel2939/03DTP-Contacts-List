@@ -107,7 +107,7 @@ namespace _03DTP_Contacts_List
             this.contactsLoad.Name = "contactsLoad";
             this.contactsLoad.Size = new System.Drawing.Size(113, 23);
             this.contactsLoad.TabIndex = 4;
-            this.contactsLoad.Text = "Reload Contacts";
+            this.contactsLoad.Text = "Refresh Page";
             this.contactsLoad.UseVisualStyleBackColor = false;
             this.contactsLoad.Click += new System.EventHandler(this.contactsLoad_Click);
             // 
@@ -146,7 +146,7 @@ namespace _03DTP_Contacts_List
             this.contactsClear.Name = "contactsClear";
             this.contactsClear.Size = new System.Drawing.Size(113, 23);
             this.contactsClear.TabIndex = 7;
-            this.contactsClear.Text = "Clear Contacts File";
+            this.contactsClear.Text = "Clear All Contacts";
             this.contactsClear.UseVisualStyleBackColor = false;
             this.contactsClear.Click += new System.EventHandler(this.contactsClear_Click);
             // 
